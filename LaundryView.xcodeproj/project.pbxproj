@@ -54,14 +54,46 @@
 		DBAC1C1E2120A633001095BA /* LaundryView */ = {
 			isa = PBXGroup;
 			children = (
-				DBAC1C1F2120A633001095BA /* AppDelegate.swift */,
-				DBAC1C212120A633001095BA /* ViewController.swift */,
-				DBAC1C232120A633001095BA /* Main.storyboard */,
-				DBAC1C262120A635001095BA /* Assets.xcassets */,
-				DBAC1C282120A635001095BA /* LaunchScreen.storyboard */,
+				DBAC1C342120A682001095BA /* Support Files */,
+				DBAC1C332120A66A001095BA /* Controller */,
+				DBAC1C322120A666001095BA /* View */,
+				DBAC1C312120A660001095BA /* Model */,
 				DBAC1C2B2120A635001095BA /* Info.plist */,
 			);
 			path = LaundryView;
+			sourceTree = "<group>";
+		};
+		DBAC1C312120A660001095BA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DBAC1C322120A666001095BA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DBAC1C232120A633001095BA /* Main.storyboard */,
+				DBAC1C282120A635001095BA /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DBAC1C332120A66A001095BA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DBAC1C1F2120A633001095BA /* AppDelegate.swift */,
+				DBAC1C212120A633001095BA /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DBAC1C342120A682001095BA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DBAC1C262120A635001095BA /* Assets.xcassets */,
+			);
+			path = "Support Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
