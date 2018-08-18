@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB2E467D2127733B00019330 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2E467C2127733B00019330 /* Constants.swift */; };
+		DB2E468121279B1C00019330 /* MainTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2E468021279B1C00019330 /* MainTab.swift */; };
+		DB2E46832127A6E400019330 /* WasherTab.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB2E46822127A6E400019330 /* WasherTab.xib */; };
+		DB2E46852127A94D00019330 /* TabBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB2E46842127A94D00019330 /* TabBar.xib */; };
 		DB9FC3272120BB1900867842 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9FC3262120BB1900867842 /* API.swift */; };
 		DB9FC3292120DF1700867842 /* MainTab.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB9FC3282120DF1700867842 /* MainTab.xib */; };
 		DB9FC32B212100A100867842 /* MachineInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB9FC32A212100A100867842 /* MachineInfoCell.xib */; };
@@ -21,6 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DB2E467C2127733B00019330 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DB2E468021279B1C00019330 /* MainTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTab.swift; sourceTree = "<group>"; };
+		DB2E46822127A6E400019330 /* WasherTab.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WasherTab.xib; sourceTree = "<group>"; };
+		DB2E46842127A94D00019330 /* TabBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBar.xib; sourceTree = "<group>"; };
 		DB9FC3262120BB1900867842 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		DB9FC3282120DF1700867842 /* MainTab.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTab.xib; sourceTree = "<group>"; };
 		DB9FC32A212100A100867842 /* MachineInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MachineInfoCell.xib; sourceTree = "<group>"; };
@@ -47,6 +55,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB2E467E2127934400019330 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				DB2E46842127A94D00019330 /* TabBar.xib */,
+				DB9FC32C2121064B00867842 /* MachineInfoTableViewCell.swift */,
+				DB9FC32A212100A100867842 /* MachineInfoCell.xib */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
+		DB2E467F21279B0100019330 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				DB9FC3282120DF1700867842 /* MainTab.xib */,
+				DB2E468021279B1C00019330 /* MainTab.swift */,
+				DB2E46822127A6E400019330 /* WasherTab.xib */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
 		DBAC1C132120A633001095BA = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +109,7 @@
 				DBAC1C352120A804001095BA /* DataManager.swift */,
 				DBAC1C372120A827001095BA /* LaundryData.swift */,
 				DB9FC3262120BB1900867842 /* API.swift */,
+				DB2E467C2127733B00019330 /* Constants.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -88,11 +117,10 @@
 		DBAC1C322120A666001095BA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DB2E467F21279B0100019330 /* Tabs */,
+				DB2E467E2127934400019330 /* Items */,
 				DBAC1C232120A633001095BA /* Main.storyboard */,
 				DBAC1C282120A635001095BA /* LaunchScreen.storyboard */,
-				DB9FC3282120DF1700867842 /* MainTab.xib */,
-				DB9FC32A212100A100867842 /* MachineInfoCell.xib */,
-				DB9FC32C2121064B00867842 /* MachineInfoTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -175,8 +203,10 @@
 				DB9FC3292120DF1700867842 /* MainTab.xib in Resources */,
 				DB9FC32B212100A100867842 /* MachineInfoCell.xib in Resources */,
 				DBAC1C2A2120A635001095BA /* LaunchScreen.storyboard in Resources */,
+				DB2E46852127A94D00019330 /* TabBar.xib in Resources */,
 				DBAC1C272120A635001095BA /* Assets.xcassets in Resources */,
 				DBAC1C252120A633001095BA /* Main.storyboard in Resources */,
+				DB2E46832127A6E400019330 /* WasherTab.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +221,8 @@
 				DBAC1C382120A827001095BA /* LaundryData.swift in Sources */,
 				DBAC1C362120A804001095BA /* DataManager.swift in Sources */,
 				DBAC1C202120A633001095BA /* AppDelegate.swift in Sources */,
+				DB2E468121279B1C00019330 /* MainTab.swift in Sources */,
+				DB2E467D2127733B00019330 /* Constants.swift in Sources */,
 				DB9FC3272120BB1900867842 /* API.swift in Sources */,
 				DB9FC32D2121064B00867842 /* MachineInfoTableViewCell.swift in Sources */,
 			);

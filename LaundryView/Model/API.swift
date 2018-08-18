@@ -10,20 +10,45 @@ import Foundation
 
 class API {
     
-    init() {
+    func retrieveData(apiURL: URL, callback: @escaping (_ jsonData: [String:Any]) -> Void) {
+        
+        let task = URLSession.shared.dataTask(with: apiURL){
+            (data, response, error) in
+            
+            if error != nil {
+                print(error!)
+            }
+            else {
+                
+                if let jsonData = data {
+                    do{
+                        if let parsedJSON = try JSONSerialization.jsonObject(with: jsonData) as? [String:AnyObject] {
+                            callback(parsedJSON)
+                        }
+                        
+                        
+                    } catch let jsonError {
+                        print("error", jsonError)
+                    }
+                    
+                }
+            }
+            
+        }
+        
+        
+        task.resume()
         
     }
     
-    func retrieveData() {
-        
-        
-        
+    func parseData(jsonData: [String:Any]) {
+        print(jsonData["name"]!)
+        print("Washers Available", jsonData["washersAvailable"]!)
+        print("Dryers Available", jsonData["dryersAvailable"]!)
     }
     
-    func parseData() {
-        
+    func getWeatherData(){
+        retrieveData(apiURL: URL(string: API_URL + "Mendelsohn/Irving")!, callback: parseData)
     }
-    
-    
     
 }
