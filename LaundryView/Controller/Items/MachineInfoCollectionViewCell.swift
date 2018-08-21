@@ -8,21 +8,23 @@
 
 import UIKit
 
-class MachineInfoTableViewCell: UITableViewCell {
+class MachineInfoCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var InfoContainer: UIView!
     @IBOutlet weak var CellContainer: UIView!
     @IBOutlet weak var TimeRemaining: UILabel!
+    @IBOutlet var content: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         // Initialization code
+        CellContainer.layer.cornerRadius = 10
+        InfoContainer.layer.cornerRadius = 16
+        
     }
+    
+    
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
 
 }

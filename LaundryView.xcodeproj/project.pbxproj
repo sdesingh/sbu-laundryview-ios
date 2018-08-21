@@ -14,7 +14,7 @@
 		DB9FC3272120BB1900867842 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9FC3262120BB1900867842 /* API.swift */; };
 		DB9FC3292120DF1700867842 /* MainTab.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB9FC3282120DF1700867842 /* MainTab.xib */; };
 		DB9FC32B212100A100867842 /* MachineInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB9FC32A212100A100867842 /* MachineInfoCell.xib */; };
-		DB9FC32D2121064B00867842 /* MachineInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9FC32C2121064B00867842 /* MachineInfoTableViewCell.swift */; };
+		DB9FC32D2121064B00867842 /* MachineInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9FC32C2121064B00867842 /* MachineInfoCollectionViewCell.swift */; };
 		DBAC1C202120A633001095BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAC1C1F2120A633001095BA /* AppDelegate.swift */; };
 		DBAC1C222120A633001095BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAC1C212120A633001095BA /* ViewController.swift */; };
 		DBAC1C252120A633001095BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBAC1C232120A633001095BA /* Main.storyboard */; };
@@ -32,7 +32,7 @@
 		DB9FC3262120BB1900867842 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		DB9FC3282120DF1700867842 /* MainTab.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTab.xib; sourceTree = "<group>"; };
 		DB9FC32A212100A100867842 /* MachineInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MachineInfoCell.xib; sourceTree = "<group>"; };
-		DB9FC32C2121064B00867842 /* MachineInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineInfoTableViewCell.swift; sourceTree = "<group>"; };
+		DB9FC32C2121064B00867842 /* MachineInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineInfoCollectionViewCell.swift; sourceTree = "<group>"; };
 		DBAC1C1C2120A633001095BA /* LaundryView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaundryView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBAC1C1F2120A633001095BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBAC1C212120A633001095BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,7 +59,6 @@
 			isa = PBXGroup;
 			children = (
 				DB2E46842127A94D00019330 /* TabBar.xib */,
-				DB9FC32C2121064B00867842 /* MachineInfoTableViewCell.swift */,
 				DB9FC32A212100A100867842 /* MachineInfoCell.xib */,
 			);
 			path = Items;
@@ -69,10 +68,25 @@
 			isa = PBXGroup;
 			children = (
 				DB9FC3282120DF1700867842 /* MainTab.xib */,
-				DB2E468021279B1C00019330 /* MainTab.swift */,
 				DB2E46822127A6E400019330 /* WasherTab.xib */,
 			);
 			path = Tabs;
+			sourceTree = "<group>";
+		};
+		DBAA613B212C5A2A0048692B /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				DB2E468021279B1C00019330 /* MainTab.swift */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		DBAA613C212C5A430048692B /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				DB9FC32C2121064B00867842 /* MachineInfoCollectionViewCell.swift */,
+			);
+			path = Items;
 			sourceTree = "<group>";
 		};
 		DBAC1C132120A633001095BA = {
@@ -128,6 +142,8 @@
 		DBAC1C332120A66A001095BA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DBAA613C212C5A430048692B /* Items */,
+				DBAA613B212C5A2A0048692B /* Tabs */,
 				DBAC1C1F2120A633001095BA /* AppDelegate.swift */,
 				DBAC1C212120A633001095BA /* ViewController.swift */,
 			);
@@ -224,7 +240,7 @@
 				DB2E468121279B1C00019330 /* MainTab.swift in Sources */,
 				DB2E467D2127733B00019330 /* Constants.swift in Sources */,
 				DB9FC3272120BB1900867842 /* API.swift in Sources */,
-				DB9FC32D2121064B00867842 /* MachineInfoTableViewCell.swift in Sources */,
+				DB9FC32D2121064B00867842 /* MachineInfoCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -22,8 +22,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func getData(_ sender: Any) {
-        print("Getting weather data...")
-        api.getWeatherData()
+        print("Getting laundry data...")
+        api.getLaundryData()
         
     }
     

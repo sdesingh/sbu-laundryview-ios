@@ -21,14 +21,15 @@ class API {
             else {
                 
                 if let jsonData = data {
-                    do{
+                    
+                    do {
                         if let parsedJSON = try JSONSerialization.jsonObject(with: jsonData) as? [String:AnyObject] {
                             callback(parsedJSON)
                         }
                         
                         
                     } catch let jsonError {
-                        print("error", jsonError)
+                        print("An error has occured.", jsonError)
                     }
                     
                 }
@@ -47,7 +48,7 @@ class API {
         print("Dryers Available", jsonData["dryersAvailable"]!)
     }
     
-    func getWeatherData(){
+    func getLaundryData(){
         retrieveData(apiURL: URL(string: API_URL + "Mendelsohn/Irving")!, callback: parseData)
     }
     
