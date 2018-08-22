@@ -40,6 +40,10 @@
                                             <action selector="getData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xjf-LJ-yjt"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dP8-sd-x70">
+                                        <rect key="frame" x="15" y="20" width="57" height="30"/>
+                                        <state key="normal" title="Settings"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.97921954314720816" green="0.97921954314720816" blue="0.97921954314720816" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -47,9 +51,11 @@
                                     <constraint firstItem="LWu-vK-kmM" firstAttribute="top" secondItem="ZZK-L5-tCq" secondAttribute="bottom" id="ADx-Ey-LwC"/>
                                     <constraint firstItem="LWu-vK-kmM" firstAttribute="centerX" secondItem="3mg-c9-Hsq" secondAttribute="centerX" id="J6n-fr-U4H"/>
                                     <constraint firstItem="iIt-ea-8F5" firstAttribute="centerY" secondItem="3mg-c9-Hsq" secondAttribute="centerY" id="PFt-ZV-qaD"/>
+                                    <constraint firstItem="dP8-sd-x70" firstAttribute="top" secondItem="3mg-c9-Hsq" secondAttribute="top" constant="20" id="TMk-LT-F9K"/>
                                     <constraint firstItem="ZZK-L5-tCq" firstAttribute="centerX" secondItem="3mg-c9-Hsq" secondAttribute="centerX" id="dUm-ap-4RY"/>
                                     <constraint firstAttribute="height" constant="70" id="f8D-fY-v3m"/>
                                     <constraint firstItem="ZZK-L5-tCq" firstAttribute="top" secondItem="3mg-c9-Hsq" secondAttribute="top" constant="10" id="qzX-xK-dfp"/>
+                                    <constraint firstItem="dP8-sd-x70" firstAttribute="leading" secondItem="3mg-c9-Hsq" secondAttribute="leading" constant="15" id="sM8-IO-Now"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A0D-RS-hUg" userLabel="Highlight Bar">
@@ -59,7 +65,7 @@
                                     <constraint firstAttribute="height" constant="20" id="tuU-ow-Hjx"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EV5-6u-ybt" userLabel="Tab Bar">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EV5-6u-ybt" userLabel="Tab Bar" customClass="TabBar" customModule="LaundryView" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="607" width="375" height="60"/>
                                 <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>

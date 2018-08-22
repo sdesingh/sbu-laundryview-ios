@@ -10,15 +10,72 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TabBar" customModule="LaundryView" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="egz-gl-YgB"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="347" height="66"/>
+            <rect key="frame" x="0.0" y="0.0" width="347" height="54"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JVh-Uf-99G" userLabel="BG">
+                    <rect key="frame" x="0.0" y="0.0" width="347" height="54"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jly-Sg-MLH">
+                            <rect key="frame" x="113.5" y="0.0" width="120" height="54"/>
+                            <color key="backgroundColor" red="0.98472917542830585" green="1" blue="0.41444587246236309" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="120" id="lnX-XQ-dY8"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEN-sG-pel">
+                            <rect key="frame" x="151.5" y="12" width="44" height="30"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <state key="normal" title="Home">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYA-AG-B3V">
+                            <rect key="frame" x="15" y="12" width="64" height="30"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <state key="normal" title="Washers">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xtp-3t-4M1">
+                            <rect key="frame" x="283" y="12" width="49" height="30"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <state key="normal" title="Dryers">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.98439523963730569" green="0.98439523963730569" blue="0.98439523963730569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="xtp-3t-4M1" firstAttribute="centerY" secondItem="JVh-Uf-99G" secondAttribute="centerY" id="34e-YA-wjo"/>
+                        <constraint firstItem="bYA-AG-B3V" firstAttribute="leading" secondItem="JVh-Uf-99G" secondAttribute="leading" constant="15" id="Jny-ho-sW1"/>
+                        <constraint firstItem="bYA-AG-B3V" firstAttribute="centerY" secondItem="JVh-Uf-99G" secondAttribute="centerY" id="W6A-YJ-SNd"/>
+                        <constraint firstItem="Jly-Sg-MLH" firstAttribute="top" secondItem="JVh-Uf-99G" secondAttribute="top" id="WiF-9Y-otm"/>
+                        <constraint firstAttribute="bottom" secondItem="Jly-Sg-MLH" secondAttribute="bottom" id="X2F-dJ-pp0"/>
+                        <constraint firstItem="Jly-Sg-MLH" firstAttribute="centerX" secondItem="JVh-Uf-99G" secondAttribute="centerX" id="haf-jP-KHH"/>
+                        <constraint firstAttribute="trailing" secondItem="xtp-3t-4M1" secondAttribute="trailing" constant="15" id="j1i-qw-3RD"/>
+                        <constraint firstItem="oEN-sG-pel" firstAttribute="centerY" secondItem="JVh-Uf-99G" secondAttribute="centerY" id="kTF-bl-D37"/>
+                        <constraint firstItem="oEN-sG-pel" firstAttribute="centerX" secondItem="JVh-Uf-99G" secondAttribute="centerX" id="uOO-Zb-ggL"/>
+                    </constraints>
+                </view>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="JVh-Uf-99G" secondAttribute="bottom" id="6Yo-JC-oqQ"/>
+                <constraint firstItem="JVh-Uf-99G" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Ayx-vh-IYo"/>
+                <constraint firstItem="JVh-Uf-99G" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="sNo-qd-cdb"/>
+                <constraint firstItem="JVh-Uf-99G" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="tet-Rd-uXb"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="81.5" y="217"/>
+            <point key="canvasLocation" x="81.5" y="223"/>
         </view>
     </objects>
 </document>
