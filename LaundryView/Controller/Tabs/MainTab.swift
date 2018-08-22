@@ -38,7 +38,9 @@ class MainTab: UIView, UICollectionViewDelegateFlowLayout, UICollectionViewDataS
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 250, height: 250)
+        let cellSize = (contentView.frame.size.width / 2) - 30
+        
+        return CGSize(width: cellSize, height: cellSize)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

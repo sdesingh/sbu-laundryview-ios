@@ -20,7 +20,7 @@ class MachineInfoCollectionViewCell: UICollectionViewCell {
         
         // Initialization code
         CellContainer.layer.cornerRadius = 10
-        InfoContainer.layer.cornerRadius = 16
+        InfoContainer.layer.cornerRadius = InfoContainer.frame.size.height / 2
         
     }
     
