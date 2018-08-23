@@ -13,7 +13,7 @@ class MachineInfoCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var InfoContainer: UIView!
     @IBOutlet weak var CellContainer: UIView!
     @IBOutlet weak var TimeRemaining: UILabel!
-    @IBOutlet var content: UIView!
+    @IBOutlet weak var MachineNumContainer: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,6 +21,7 @@ class MachineInfoCollectionViewCell: UICollectionViewCell {
         // Initialization code
         CellContainer.layer.cornerRadius = 10
         InfoContainer.layer.cornerRadius = InfoContainer.frame.size.height / 2
+        MachineNumContainer.layer.cornerRadius = MachineNumContainer.frame.size.height / 2
         
     }
     

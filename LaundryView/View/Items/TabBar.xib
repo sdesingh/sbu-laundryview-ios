@@ -25,7 +25,7 @@
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jly-Sg-MLH">
                             <rect key="frame" x="113.5" y="0.0" width="120" height="54"/>
-                            <color key="backgroundColor" red="0.98472917542830585" green="1" blue="0.41444587246236309" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="1" green="0.95093638729999996" blue="0.34583918699999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="120" id="lnX-XQ-dY8"/>
                             </constraints>
@@ -38,14 +38,14 @@
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYA-AG-B3V">
-                            <rect key="frame" x="15" y="12" width="64" height="30"/>
+                            <rect key="frame" x="15" y="12" width="83.5" height="30"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                             <state key="normal" title="Washers">
                                 <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xtp-3t-4M1">
-                            <rect key="frame" x="283" y="12" width="49" height="30"/>
+                            <rect key="frame" x="248.5" y="12" width="83.5" height="30"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                             <state key="normal" title="Dryers">
                                 <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -60,9 +60,11 @@
                         <constraint firstItem="Jly-Sg-MLH" firstAttribute="top" secondItem="JVh-Uf-99G" secondAttribute="top" id="WiF-9Y-otm"/>
                         <constraint firstAttribute="bottom" secondItem="Jly-Sg-MLH" secondAttribute="bottom" id="X2F-dJ-pp0"/>
                         <constraint firstItem="Jly-Sg-MLH" firstAttribute="centerX" secondItem="JVh-Uf-99G" secondAttribute="centerX" id="haf-jP-KHH"/>
+                        <constraint firstItem="xtp-3t-4M1" firstAttribute="leading" secondItem="Jly-Sg-MLH" secondAttribute="trailing" constant="15" id="iWw-HL-rC5"/>
                         <constraint firstAttribute="trailing" secondItem="xtp-3t-4M1" secondAttribute="trailing" constant="15" id="j1i-qw-3RD"/>
                         <constraint firstItem="oEN-sG-pel" firstAttribute="centerY" secondItem="JVh-Uf-99G" secondAttribute="centerY" id="kTF-bl-D37"/>
                         <constraint firstItem="oEN-sG-pel" firstAttribute="centerX" secondItem="JVh-Uf-99G" secondAttribute="centerX" id="uOO-Zb-ggL"/>
+                        <constraint firstItem="Jly-Sg-MLH" firstAttribute="leading" secondItem="bYA-AG-B3V" secondAttribute="trailing" constant="15" id="xvg-dc-SAo"/>
                     </constraints>
                 </view>
             </subviews>

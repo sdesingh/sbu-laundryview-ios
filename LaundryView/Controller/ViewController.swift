@@ -12,12 +12,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tabView: UIView!
     
-    let api = API()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         
     }
 

@@ -34,8 +34,8 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIt-ea-8F5">
-                                        <rect key="frame" x="330" y="20" width="30" height="30"/>
-                                        <state key="normal" title="Get"/>
+                                        <rect key="frame" x="307" y="20" width="53" height="30"/>
+                                        <state key="normal" title="Refresh"/>
                                         <connections>
                                             <action selector="getData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xjf-LJ-yjt"/>
                                         </connections>
