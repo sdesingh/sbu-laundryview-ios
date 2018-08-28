@@ -46,6 +46,17 @@ class API {
         print(jsonData["name"]!)
         print("Washers Available", jsonData["washersAvailable"]!)
         print("Dryers Available", jsonData["dryersAvailable"]!)
+        
+        if let machineData = jsonData["machines"] as? [Any] {
+            
+            for machine in machineData {
+                
+                if let machineStatus = machine as? [String:Any] {
+                    print(machineStatus["status"]!)
+                }
+                
+            }
+        }
     }
     
     func getLaundryData(){

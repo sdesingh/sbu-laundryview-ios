@@ -12,8 +12,9 @@ class MachineInfoCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var InfoContainer: UIView!
     @IBOutlet weak var CellContainer: UIView!
-    @IBOutlet weak var TimeRemaining: UILabel!
+    @IBOutlet weak var MachineStatus: UILabel!
     @IBOutlet weak var MachineNumContainer: UIView!
+    @IBOutlet weak var MachineNum: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

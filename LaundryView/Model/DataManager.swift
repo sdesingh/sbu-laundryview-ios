@@ -21,6 +21,16 @@ class DataManager {
         self.laundryRoom = data
     }
     
+    func getLaundryData() -> LaundryRoom{
+        
+        if let laundryData = laundryRoom {
+            return laundryData
+        }else {
+            return LaundryRoom(quadName: "No Internet", roomName: "Try Again", totalWashers: 0, totalDryers: 0)
+        }
+        
+    }
+    
     
     
 }

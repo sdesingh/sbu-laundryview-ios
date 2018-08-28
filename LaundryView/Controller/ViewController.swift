@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tabView: UIView!
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,7 +20,7 @@ class ViewController: UIViewController {
 
     @IBAction func getData(_ sender: Any) {
         print("Getting laundry data...")
-        api.getLaundryData()
+        dataManager.api.getLaundryData()
         
     }
     
