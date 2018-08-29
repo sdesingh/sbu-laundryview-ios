@@ -89,6 +89,7 @@
                 <outlet property="InfoContainer" destination="NUs-7h-i0G" id="ml8-bH-HG5"/>
                 <outlet property="MachineNum" destination="5Gz-UB-mmt" id="qAz-pR-YLQ"/>
                 <outlet property="MachineNumContainer" destination="4ZM-Ok-Gc7" id="bHm-LN-UuU"/>
+                <outlet property="MachineStatus" destination="9o4-hU-1IU" id="zod-Ao-Cu8"/>
             </connections>
             <point key="canvasLocation" x="-49.5" y="-180"/>
         </view>

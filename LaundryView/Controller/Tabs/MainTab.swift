@@ -45,9 +45,13 @@ class MainTab: UIView, UICollectionViewDelegateFlowLayout, UICollectionViewDataS
     }
     
     @objc func updateViewsWithData(){
-        print("Updating data!")
+
         laundryData = dataManager.laundryRoom!
-        collectionView.reloadData()
+        
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
+        
     }
     
     
@@ -56,7 +60,6 @@ class MainTab: UIView, UICollectionViewDelegateFlowLayout, UICollectionViewDataS
         var numberOfMachines: Int = 0
         
         if(laundryData != nil){
-            print("Not nil!")
             numberOfMachines = (laundryData?.machines.count)!
         }
         
@@ -72,16 +75,19 @@ class MainTab: UIView, UICollectionViewDelegateFlowLayout, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "infoCell", for: indexPath) as! MachineInfoCollectionViewCell
-        cell.MachineNum.text = "\(indexPath.row + 1)"
         
-        if let machines = laundryData?.machines {
+        if let machine = laundryData?.machines[indexPath.row] {
+            cell.MachineNum.text = "\(indexPath.row + 1)"
             
-            cell.MachineStatus.text = "\(machines[indexPath.row].currentStatus)"
+            cell.MachineStatus.text = "\(machine.currentStatus.rawValue)"
             
+        }else {
+            // Do nothing
         }
-        
-        
+    
         return cell
+        
+        
     }
     
     

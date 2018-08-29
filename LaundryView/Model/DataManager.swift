@@ -21,13 +21,23 @@ class DataManager {
         self.laundryRoom = data
     }
     
-    func getLaundryData() -> LaundryRoom{
+    func getLaundryData(){
         
-        if let laundryData = api.getLaundryData() {
-            return laundryData
-        }else {
-            return LaundryRoom(quadName: "No Internet", roomName: "Try Again", totalWashers: 0, totalDryers: 0)
-        }
+        api.getLaundryData(callback: {
+            
+            (jsonData: [String:Any]) in
+            
+            self.laundryRoom = self.api.parseData(jsonData: jsonData)
+            
+            
+            DispatchQueue.main.async {
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: NOTIFICATION_KEY), object: nil)
+            }
+            
+            
+            
+            
+        })
         
     }
     

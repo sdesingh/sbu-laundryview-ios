@@ -20,7 +20,7 @@ class ViewController: UIViewController {
 
     @IBAction func getData(_ sender: Any) {
         print("Getting laundry data...")
-        dataManager.api.getLaundryData()
+        dataManager.getLaundryData()
         
     }
     
