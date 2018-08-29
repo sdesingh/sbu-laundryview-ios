@@ -10,7 +10,7 @@ import Foundation
 
 class API {
     
-    func retrieveData(apiURL: URL, callback: @escaping (_ jsonData: [String:Any]) -> Void) {
+    func retrieveData(apiURL: URL, callback: @escaping (_ jsonData: [String:Any]) -> LaundryRoom) {
         
         let task = URLSession.shared.dataTask(with: apiURL){
             (data, response, error) in
@@ -42,10 +42,11 @@ class API {
         
     }
     
-    func parseData(jsonData: [String:Any]) {
-        print(jsonData["name"]!)
-        print("Washers Available", jsonData["washersAvailable"]!)
-        print("Dryers Available", jsonData["dryersAvailable"]!)
+    func parseData(jsonData: [String:Any]) -> LaundryRoom{
+        
+        let quadName = jsonData["name"]! as! String
+        let totalWashers = jsonData["totalWashers"]! as! Int
+        let totalDryers = jsonData["totalDryers"]! as! Int
         
         if let machineData = jsonData["machines"] as? [Any] {
             
@@ -56,11 +57,14 @@ class API {
                 }
                 
             }
+            
+            return LaundryRoom(quadName: quadName, roomName: "Mendelsohn", totalWashers: totalWashers, totalDryers: totalDryers)
+            
         }
     }
     
-    func getLaundryData(){
-        retrieveData(apiURL: URL(string: API_URL + "Mendelsohn/Irving")!, callback: parseData)
+    func getLaundryData() -> LaundryRoom{
+        return retrieveData(apiURL: URL(string: API_URL + "Mendelsohn/Irving")!, callback: parseData)
     }
     
 }

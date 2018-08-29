@@ -25,8 +25,7 @@ class MainTab: UIView, UICollectionViewDelegateFlowLayout, UICollectionViewDataS
         super.init(coder: aDecoder)
         initializeView()
     }
-    
-    
+
     private func initializeView(){
         Bundle.main.loadNibNamed("MainTab", owner: self, options: nil)
         addSubview(contentView)
@@ -34,11 +33,34 @@ class MainTab: UIView, UICollectionViewDelegateFlowLayout, UICollectionViewDataS
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         self.collectionView.register(UINib.init(nibName: "MachineInfoCell", bundle: nil), forCellWithReuseIdentifier: "infoCell")
         
-//        laundryData = dataManager.laundryRoom!
+        initializeListeners()
+        
     }
     
+    func initializeListeners() {
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(updateViewsWithData), name: NSNotification.Name(rawValue: NOTIFICATION_KEY), object: nil)
+        
+        
+    }
+    
+    @objc func updateViewsWithData(){
+        print("Updating data!")
+        laundryData = dataManager.laundryRoom!
+        collectionView.reloadData()
+    }
+    
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 16
+        
+        var numberOfMachines: Int = 0
+        
+        if(laundryData != nil){
+            print("Not nil!")
+            numberOfMachines = (laundryData?.machines.count)!
+        }
+        
+        return numberOfMachines
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -48,10 +70,13 @@ class MainTab: UIView, UICollectionViewDelegateFlowLayout, UICollectionViewDataS
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "infoCell", for: indexPath) as! MachineInfoCollectionViewCell
         cell.MachineNum.text = "\(indexPath.row + 1)"
         
         if let machines = laundryData?.machines {
+            
+            cell.MachineStatus.text = "\(machines[indexPath.row].currentStatus)"
             
         }
         

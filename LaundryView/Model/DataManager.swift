@@ -23,7 +23,7 @@ class DataManager {
     
     func getLaundryData() -> LaundryRoom{
         
-        if let laundryData = laundryRoom {
+        if let laundryData = api.getLaundryData() {
             return laundryData
         }else {
             return LaundryRoom(quadName: "No Internet", roomName: "Try Again", totalWashers: 0, totalDryers: 0)
