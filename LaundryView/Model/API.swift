@@ -64,13 +64,12 @@ class API {
                 
                 switch (status){
                     
-                case 0: machineStatus = .Available
-                case 1: machineStatus = .Done_Door_Closed
-                case 2: machineStatus = .In_Progress
-                case 3: machineStatus = .Out_Of_Order
-                case 4: machineStatus = .Unknown
-                default: machineStatus = .Unknown
-                    
+                    case 0: machineStatus = .Available
+                    case 1: machineStatus = .Done_Door_Closed
+                    case 2: machineStatus = .In_Progress
+                    case 3: machineStatus = .Out_Of_Order
+                    case 4: machineStatus = .Unknown
+                    default: machineStatus = .Unknown
                     
                 }
                 

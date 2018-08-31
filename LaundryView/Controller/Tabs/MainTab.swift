@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainTab: UIView, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource{
+class MainTab: CollectionViewCell, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource{
 
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -28,6 +28,7 @@ class MainTab: UIView, UICollectionViewDelegateFlowLayout, UICollectionViewDataS
 
     private func initializeView(){
         Bundle.main.loadNibNamed("MainTab", owner: self, options: nil)
+        collectionView.delegate = self
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
@@ -40,7 +41,6 @@ class MainTab: UIView, UICollectionViewDelegateFlowLayout, UICollectionViewDataS
     func initializeListeners() {
         
         NotificationCenter.default.addObserver(self, selector: #selector(updateViewsWithData), name: NSNotification.Name(rawValue: NOTIFICATION_KEY), object: nil)
-        
         
     }
     
@@ -86,7 +86,6 @@ class MainTab: UIView, UICollectionViewDelegateFlowLayout, UICollectionViewDataS
         }
     
         return cell
-        
         
     }
     

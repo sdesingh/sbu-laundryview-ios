@@ -24,6 +24,8 @@
 		DBAC1C2A2120A635001095BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBAC1C282120A635001095BA /* LaunchScreen.storyboard */; };
 		DBAC1C362120A804001095BA /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAC1C352120A804001095BA /* DataManager.swift */; };
 		DBAC1C382120A827001095BA /* LaundryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAC1C372120A827001095BA /* LaundryData.swift */; };
+		DBD85E252136F21B00DCCAEB /* MachineInfoModal.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBD85E242136F21B00DCCAEB /* MachineInfoModal.xib */; };
+		DBD85E2721371DF200DCCAEB /* MachineInfoModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD85E2621371DF200DCCAEB /* MachineInfoModal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		DBAC1C2B2120A635001095BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBAC1C352120A804001095BA /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		DBAC1C372120A827001095BA /* LaundryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryData.swift; sourceTree = "<group>"; };
+		DBD85E242136F21B00DCCAEB /* MachineInfoModal.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MachineInfoModal.xib; sourceTree = "<group>"; };
+		DBD85E2621371DF200DCCAEB /* MachineInfoModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineInfoModal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 			children = (
 				DB2E46842127A94D00019330 /* TabBar.xib */,
 				DB9FC32A212100A100867842 /* MachineInfoCell.xib */,
+				DBD85E242136F21B00DCCAEB /* MachineInfoModal.xib */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -91,6 +96,7 @@
 			children = (
 				DB9FC32C2121064B00867842 /* MachineInfoCollectionViewCell.swift */,
 				DB14DEE8212D97B6006872A2 /* TabBar.swift */,
+				DBD85E2621371DF200DCCAEB /* MachineInfoModal.swift */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -225,6 +231,7 @@
 				DB9FC3292120DF1700867842 /* MainTab.xib in Resources */,
 				DB9FC32B212100A100867842 /* MachineInfoCell.xib in Resources */,
 				DBAC1C2A2120A635001095BA /* LaunchScreen.storyboard in Resources */,
+				DBD85E252136F21B00DCCAEB /* MachineInfoModal.xib in Resources */,
 				DB2E46852127A94D00019330 /* TabBar.xib in Resources */,
 				DBAC1C272120A635001095BA /* Assets.xcassets in Resources */,
 				DBAC1C252120A633001095BA /* Main.storyboard in Resources */,
@@ -241,6 +248,7 @@
 			files = (
 				DB14DEE9212D97B6006872A2 /* TabBar.swift in Sources */,
 				DB14DEEB212DA2D0006872A2 /* WasherTab.swift in Sources */,
+				DBD85E2721371DF200DCCAEB /* MachineInfoModal.swift in Sources */,
 				DBAC1C222120A633001095BA /* ViewController.swift in Sources */,
 				DBAC1C382120A827001095BA /* LaundryData.swift in Sources */,
 				DBAC1C362120A804001095BA /* DataManager.swift in Sources */,
