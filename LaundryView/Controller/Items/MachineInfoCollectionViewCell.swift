@@ -16,6 +16,9 @@ class MachineInfoCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var MachineNumContainer: UIView!
     @IBOutlet weak var MachineNum: UILabel!
     
+    var cellIndex: Int = 0
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         

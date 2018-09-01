@@ -72,31 +72,51 @@
                                     <constraint firstAttribute="height" constant="60" id="uhQ-CO-EL4"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cgo-tj-Kuz" customClass="MainTab" customModule="LaundryView" customModuleProvider="target">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6Q9-3e-y1v" userLabel="Tab View">
                                 <rect key="frame" x="0.0" y="90" width="375" height="517"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="K6w-3O-HgU">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="tabCell" id="PLX-0t-aVL" customClass="LaundryTabCollectionViewCell" customModule="LaundryView" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Zuk-Dq-qes"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Bfi-NS-Vmp"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="3mg-c9-Hsq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0dH-Ba-isW"/>
+                            <constraint firstItem="6Q9-3e-y1v" firstAttribute="top" secondItem="3mg-c9-Hsq" secondAttribute="bottom" id="13t-2N-FfS"/>
                             <constraint firstAttribute="trailing" secondItem="A0D-RS-hUg" secondAttribute="trailing" id="6AJ-Us-qdC"/>
                             <constraint firstItem="3mg-c9-Hsq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6DF-9p-oFV"/>
+                            <constraint firstItem="6Q9-3e-y1v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ADC-Md-PHU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6Q9-3e-y1v" secondAttribute="trailing" id="AHv-fh-zg5"/>
                             <constraint firstItem="3mg-c9-Hsq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IJI-Oz-TUv"/>
-                            <constraint firstItem="Cgo-tj-Kuz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JgK-D0-xmb"/>
                             <constraint firstItem="EV5-6u-ybt" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Mkk-w2-LvX"/>
-                            <constraint firstItem="Cgo-tj-Kuz" firstAttribute="top" secondItem="3mg-c9-Hsq" secondAttribute="bottom" id="jFk-IS-KY1"/>
-                            <constraint firstItem="EV5-6u-ybt" firstAttribute="top" secondItem="Cgo-tj-Kuz" secondAttribute="bottom" id="jjg-YO-drZ"/>
+                            <constraint firstItem="EV5-6u-ybt" firstAttribute="top" secondItem="6Q9-3e-y1v" secondAttribute="bottom" id="Rg6-JJ-57a"/>
                             <constraint firstItem="EV5-6u-ybt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mYb-4g-jsD"/>
                             <constraint firstItem="A0D-RS-hUg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mhD-ur-IiU"/>
                             <constraint firstItem="EV5-6u-ybt" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="nk7-QM-Puo"/>
-                            <constraint firstItem="Cgo-tj-Kuz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="sid-GN-TPU"/>
                             <constraint firstItem="A0D-RS-hUg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="zzS-QQ-grp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="tabView" destination="Cgo-tj-Kuz" id="qBK-9z-t1C"/>
+                        <outlet property="tabView" destination="6Q9-3e-y1v" id="6t4-D9-AJj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

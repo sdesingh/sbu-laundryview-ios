@@ -8,9 +8,8 @@
 
 import UIKit
 
-class MainTab: CollectionViewCell, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource{
+class MainTab: UICollectionViewCell, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource{
 
-    @IBOutlet var contentView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     
     var laundryData: LaundryRoom?
@@ -29,7 +28,6 @@ class MainTab: CollectionViewCell, UICollectionViewDelegateFlowLayout, UICollect
     private func initializeView(){
         Bundle.main.loadNibNamed("MainTab", owner: self, options: nil)
         collectionView.delegate = self
-        addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         self.collectionView.register(UINib.init(nibName: "MachineInfoCell", bundle: nil), forCellWithReuseIdentifier: "infoCell")

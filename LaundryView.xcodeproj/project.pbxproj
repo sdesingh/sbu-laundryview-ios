@@ -26,6 +26,7 @@
 		DBAC1C382120A827001095BA /* LaundryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAC1C372120A827001095BA /* LaundryData.swift */; };
 		DBD85E252136F21B00DCCAEB /* MachineInfoModal.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBD85E242136F21B00DCCAEB /* MachineInfoModal.xib */; };
 		DBD85E2721371DF200DCCAEB /* MachineInfoModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD85E2621371DF200DCCAEB /* MachineInfoModal.swift */; };
+		DBD85E2921399B1200DCCAEB /* LaundryTabCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD85E2821399B1200DCCAEB /* LaundryTabCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		DBAC1C372120A827001095BA /* LaundryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryData.swift; sourceTree = "<group>"; };
 		DBD85E242136F21B00DCCAEB /* MachineInfoModal.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MachineInfoModal.xib; sourceTree = "<group>"; };
 		DBD85E2621371DF200DCCAEB /* MachineInfoModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineInfoModal.swift; sourceTree = "<group>"; };
+		DBD85E2821399B1200DCCAEB /* LaundryTabCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryTabCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				DB9FC32C2121064B00867842 /* MachineInfoCollectionViewCell.swift */,
+				DBD85E2821399B1200DCCAEB /* LaundryTabCollectionViewCell.swift */,
 				DB14DEE8212D97B6006872A2 /* TabBar.swift */,
 				DBD85E2621371DF200DCCAEB /* MachineInfoModal.swift */,
 			);
@@ -252,6 +255,7 @@
 				DBAC1C222120A633001095BA /* ViewController.swift in Sources */,
 				DBAC1C382120A827001095BA /* LaundryData.swift in Sources */,
 				DBAC1C362120A804001095BA /* DataManager.swift in Sources */,
+				DBD85E2921399B1200DCCAEB /* LaundryTabCollectionViewCell.swift in Sources */,
 				DBAC1C202120A633001095BA /* AppDelegate.swift in Sources */,
 				DB2E468121279B1C00019330 /* MainTab.swift in Sources */,
 				DB2E467D2127733B00019330 /* Constants.swift in Sources */,
