@@ -8,9 +8,8 @@
 
 import UIKit
 
-class WasherTab: UIView, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+class WasherTab: UICollectionViewCell, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
-    @IBOutlet var contentView: UIView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)

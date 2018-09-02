@@ -18,21 +18,22 @@ class MainTab: UICollectionViewCell, UICollectionViewDelegateFlowLayout, UIColle
         super.init(frame: frame)
 
         initializeView()
+        initializeListeners()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         initializeView()
+        initializeListeners()
     }
 
     private func initializeView(){
         Bundle.main.loadNibNamed("MainTab", owner: self, options: nil)
-        collectionView.delegate = self
         contentView.frame = self.bounds
-        contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        collectionView.delegate = self
+        collectionView.dataSource = self
         self.collectionView.register(UINib.init(nibName: "MachineInfoCell", bundle: nil), forCellWithReuseIdentifier: "infoCell")
-        
-        initializeListeners()
         
     }
     

@@ -30,22 +30,27 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "tabCell", for: indexPath) as! LaundryTabCollectionViewCell
+        
+        let cell = { () -> UICollectionViewCell in
+            
+            let setupCell = collectionView.dequeueReusableCell(withReuseIdentifier: "tabCell", for: indexPath) as! LaundryTabCollectionViewCell
+            
+            setupCell.setupCell(index: indexPath.row)
+            
+            return setupCell
+
+        }
         
         let colors: [UIColor] = [.blue, .red, .green]
         
-        
-        cell.backgroundColor = colors[indexPath.row]
-        cell.setupCell(index: indexPath.row)
-        
-        return cell
+        return cell()
         
         
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize.init(width: view.frame.width, height: view.frame.height)
+        return CGSize.init(width: tabView.frame.width, height: tabView.frame.height)
     }
     
     

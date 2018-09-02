@@ -13,7 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainTab" customModule="LaundryView" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="NLy-iY-lE2" id="T4o-df-lM0"/>
-                <outlet property="contentView" destination="iN0-l3-epB" id="jSY-hf-Vco"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="dfl-Hd-jQ7"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
