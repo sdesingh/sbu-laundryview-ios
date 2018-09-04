@@ -51,7 +51,6 @@ class API {
         var room: LaundryRoom = LaundryRoom(quadName: "Mendelsohn", roomName: roomName, totalWashers: totalWashers, totalDryers: totalDryers)
         
         let machineData = jsonData["machines"] as? [Any]
-        
             
         for machine in machineData! {
                 
@@ -59,21 +58,37 @@ class API {
                 
                 let number = machineData["machineNumber"] as! Int
                 let status = machineData["statusCode"] as! Int
-                var machineStatus: Machine.MachineStatus
                 let type = machineData["machineType"] as! String
                 
-                switch (status){
+                
+                var machineStatus: Machine.MachineStatus {
                     
-                    case 0: machineStatus = .Available
-                    case 1: machineStatus = .Done_Door_Closed
-                    case 2: machineStatus = .In_Progress
-                    case 3: machineStatus = .Out_Of_Order
-                    case 4: machineStatus = .Unknown
-                    default: machineStatus = .Unknown
+                    switch (status){
+                        
+                        case 0: return .Available
+                        case 1: return .Done_Door_Closed
+                        case 2: return .In_Progress
+                        case 3: return .Out_Of_Order
+                        case 4: return .Unknown
+                        default: return .Unknown
+                        
+                    }
                     
                 }
                 
-                var newMachine = Machine(machineType: .Washer, currentStatus: machineStatus, machineID: number)
+                var machineType: Machine.MachineType {
+                    
+                    switch(type){
+                        
+                        case "W": return .Washer
+                        case "D": return .Dryer
+                        default: return .Other
+        
+                    }
+                    
+                }
+                
+                let newMachine = Machine(machineType: machineType, currentStatus: machineStatus, machineID: number)
                 room.machines.append(newMachine)
                 
             }
@@ -84,7 +99,7 @@ class API {
         
     }
     
-    func getLaundryData(callback: @escaping (_ jsonData: [String:Any]) -> Void){
+    func getData(callback: @escaping (_ jsonData: [String:Any]) -> Void){
         retrieveData(apiURL: URL(string: API_URL + "Mendelsohn/Irving")!, callback: callback)
     }
     

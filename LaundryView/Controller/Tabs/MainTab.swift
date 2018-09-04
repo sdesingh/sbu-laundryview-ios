@@ -30,29 +30,29 @@ class MainTab: UICollectionViewCell, UICollectionViewDelegateFlowLayout, UIColle
     private func initializeView(){
         Bundle.main.loadNibNamed("MainTab", owner: self, options: nil)
         contentView.frame = self.bounds
-        contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         collectionView.delegate = self
         collectionView.dataSource = self
+        
         self.collectionView.register(UINib.init(nibName: "MachineInfoCell", bundle: nil), forCellWithReuseIdentifier: "infoCell")
         
     }
     
     func initializeListeners() {
         
-        NotificationCenter.default.addObserver(self, selector: #selector(updateViewsWithData), name: NSNotification.Name(rawValue: NOTIFICATION_KEY), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateViewsWithData), name: NSNotification.Name(rawValue: BASE_NOTIFICATION_KEY + DATA_RETRIEVED_SUCCESS), object: nil)
         
     }
     
     @objc func updateViewsWithData(){
 
-        laundryData = dataManager.laundryRoom!
+        laundryData = DATA_MANAGER.laundryRoom!
         
         DispatchQueue.main.async {
             self.collectionView.reloadData()
         }
         
     }
-    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         

@@ -31,6 +31,22 @@ struct LaundryRoom {
         
     }
     
+    func getMachinesOfType(type: Machine.MachineType) -> [Machine] {
+        
+        var machinesOfType: [Machine] = [Machine]()
+        
+        for machine in machines {
+            
+            if(machine.machineType == type){
+                machinesOfType.append(machine)
+            }
+            
+        }
+        
+        return machinesOfType
+        
+    }
+    
 }
 
 struct Machine {
@@ -38,9 +54,11 @@ struct Machine {
     enum MachineType {
         case Washer
         case Dryer
+        case Other
     }
     
     enum MachineStatus: String {
+        
         case Available = "Available"
         case In_Progress = "In Progress"
         case Done_Door_Closed = "Done. Door Closed."

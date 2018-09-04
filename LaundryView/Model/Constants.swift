@@ -10,5 +10,5 @@ import Foundation
 
 
 let API_URL = "http://ec2-18-218-241-28.us-east-2.compute.amazonaws.com/new/"
-let NOTIFICATION_KEY = "com.mangohut.laundryview"
-let dataManager = DataManager(quadName: "Mendelsohn", roomName: "Irving")
+let BASE_NOTIFICATION_KEY = "com.mangohut.laundryview"
+let DATA_MANAGER = DataManager()

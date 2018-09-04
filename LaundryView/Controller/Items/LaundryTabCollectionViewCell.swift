@@ -18,18 +18,31 @@ class LaundryTabCollectionViewCell: UICollectionViewCell {
     func setupCell(index: Int){
         
         switch(index){
-        case 1:
-//            print(frame)
-            contentView.frame = self.bounds
-            contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-            let newView = MainTab(frame: contentView.frame)
-
             
-            contentView.addSubview(newView)
-//            self.contentView.layer.borderWidth = 5
-//            self.contentView.layer.borderColor = UIColor(red:222/255, green:225/255, blue:227/255, alpha: 1).cgColor
-//            contentView.backgroundColor = UIColor.red
-        default: return
+            case 0:
+                contentView.frame = self.bounds
+                let newView = MachineTab(frame: contentView.frame, type: .Washer)
+                newView.updateViewsData()
+//                newView.backgroundColor = .red
+                
+                contentView.addSubview(newView)
+            
+            case 2:
+                contentView.frame = self.bounds
+                let view = MachineTab(frame: contentView.frame, type: .Dryer)
+                view.updateViewsData()
+//                newView.backgroundColor = .green
+                
+                contentView.addSubview(view)
+            
+
+            case 1:
+                contentView.frame = self.bounds
+                let newView = MainTab(frame: contentView.frame)
+                
+                contentView.addSubview(newView)
+            
+            default: return
         }
         
         

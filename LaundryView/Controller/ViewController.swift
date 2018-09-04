@@ -12,6 +12,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     @IBOutlet weak var tabView: UICollectionView!
     
+    var cells: [LaundryTabCollectionViewCell] = [LaundryTabCollectionViewCell]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,9 +22,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         if let flowLayout = tabView?.collectionViewLayout as? UICollectionViewFlowLayout {
             flowLayout.minimumLineSpacing = 0
         }
+
         
+        tabView.scrollToItem(at: IndexPath(item: 1, section: 0), at: .init(rawValue: 0), animated: false)
     }
-    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 3
@@ -30,22 +33,17 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        
-        let cell = { () -> UICollectionViewCell in
-            
+        return { () -> UICollectionViewCell in
+
             let setupCell = collectionView.dequeueReusableCell(withReuseIdentifier: "tabCell", for: indexPath) as! LaundryTabCollectionViewCell
-            
+
+
             setupCell.setupCell(index: indexPath.row)
-            
+
             return setupCell
 
-        }
-        
-        let colors: [UIColor] = [.blue, .red, .green]
-        
-        return cell()
-        
-        
+            }()
+
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -54,10 +52,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     
-    
     @IBAction func getData(_ sender: Any) {
         print("Getting laundry data...")
-        dataManager.getLaundryData()
+        DATA_MANAGER.getLaundryData()
         
     }
     

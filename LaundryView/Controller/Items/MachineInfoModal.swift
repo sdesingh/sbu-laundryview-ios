@@ -19,6 +19,7 @@ class MachineInfoModal: UIView {
     @IBOutlet weak var machineTypeContainer: UIView!
     @IBOutlet weak var machineNumberContainer: UIView!
     @IBOutlet weak var machineStatusContainer: UIView!
+    @IBOutlet weak var menuBG: UIView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -34,6 +35,10 @@ class MachineInfoModal: UIView {
         machineTypeContainer.layer.cornerRadius = 5
         machineNumberContainer.layer.cornerRadius = 5
         machineStatusContainer.layer.cornerRadius = 5
+    }
+    
+    func showMenu() {
+        
     }
     
     func hideMenu(){
