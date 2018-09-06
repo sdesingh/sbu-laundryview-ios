@@ -24,7 +24,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
 
         
-        tabView.scrollToItem(at: IndexPath(item: 1, section: 0), at: .init(rawValue: 0), animated: false)
+//        tabView.scrollToItem(at: IndexPath(item: 1, section: 0), at: .init(rawValue: 0), animated: false)
+        
+        DATA_MANAGER.getLaundryData()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

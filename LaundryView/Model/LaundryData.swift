@@ -15,8 +15,37 @@ struct LaundryRoom {
     
     var totalWashers: Int
     var totalDryers: Int
-    var washersAvailable: Int
-    var dryersAvailable: Int
+    
+    var washersAvailable: Int {
+        
+        var available = 0
+        for machine in machines{
+            
+            if(machine.machineType == .Washer && machine.currentStatus == .Available){
+                available += 1
+            }
+            
+        }
+        
+        return available
+    }
+    
+    
+    var dryersAvailable: Int {
+        
+        var available = 0
+        for machine in machines{
+            
+            if(machine.machineType == .Dryer && machine.currentStatus == .Available){
+                available += 1
+            }
+            
+        }
+        
+        return available
+    }
+    
+    
     var machines: [Machine] = []
     
     init(quadName: String, roomName: String, totalWashers: Int, totalDryers: Int){
@@ -25,9 +54,6 @@ struct LaundryRoom {
         self.roomName = roomName
         self.totalWashers = totalWashers
         self.totalDryers = totalDryers
-        
-        self.washersAvailable = 0
-        self.dryersAvailable = 0
         
     }
     

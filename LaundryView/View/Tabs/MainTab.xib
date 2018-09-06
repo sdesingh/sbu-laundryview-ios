@@ -14,6 +14,10 @@
             <connections>
                 <outlet property="collectionView" destination="NLy-iY-lE2" id="T4o-df-lM0"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="XIV-0w-DEb"/>
+                <outlet property="dryerStatusIcon" destination="RlB-jr-se7" id="jdL-Dw-sFO"/>
+                <outlet property="dryersAvailable_Lbl" destination="Zas-6b-0yZ" id="AJg-Gh-zvW"/>
+                <outlet property="washerStatusIcon" destination="BFO-p3-VSt" id="Mdw-6S-lEJ"/>
+                <outlet property="washersAvailable_Lbl" destination="tSd-AH-dge" id="Ltz-ZW-UAO"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -47,8 +51,8 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="available." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uce-s7-UtD" userLabel="Machine Status">
-                            <rect key="frame" x="66" y="14.5" width="71" height="21"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uce-s7-UtD" userLabel="Machine Status">
+                            <rect key="frame" x="66" y="25" width="0.0" height="0.0"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -173,6 +177,7 @@
                 </collectionView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="tintColor" red="0.25882352941176473" green="0.84705882352941175" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="ddG-Wf-bij" firstAttribute="top" secondItem="00S-tg-haG" secondAttribute="bottom" constant="20" id="0pk-Dh-7mg"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="uki-cb-MKa" secondAttribute="trailing" constant="30" id="1Tj-kM-efJ"/>

@@ -13,6 +13,7 @@
 		DB2E468121279B1C00019330 /* MainTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2E468021279B1C00019330 /* MainTab.swift */; };
 		DB2E46852127A94D00019330 /* TabBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB2E46842127A94D00019330 /* TabBar.xib */; };
 		DB4FEC0A213D8C53002BEED1 /* MachineTab.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB2E46822127A6E400019330 /* MachineTab.xib */; };
+		DB7BE2362140100B00D9CD09 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7BE2352140100B00D9CD09 /* Utilities.swift */; };
 		DB9FC3272120BB1900867842 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9FC3262120BB1900867842 /* API.swift */; };
 		DB9FC3292120DF1700867842 /* MainTab.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB9FC3282120DF1700867842 /* MainTab.xib */; };
 		DB9FC32B212100A100867842 /* MachineInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB9FC32A212100A100867842 /* MachineInfoCell.xib */; };
@@ -37,6 +38,7 @@
 		DB2E468021279B1C00019330 /* MainTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTab.swift; sourceTree = "<group>"; };
 		DB2E46822127A6E400019330 /* MachineTab.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MachineTab.xib; sourceTree = "<group>"; };
 		DB2E46842127A94D00019330 /* TabBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBar.xib; sourceTree = "<group>"; };
+		DB7BE2352140100B00D9CD09 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		DB9FC3262120BB1900867842 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		DB9FC3282120DF1700867842 /* MainTab.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTab.xib; sourceTree = "<group>"; };
 		DB9FC32A212100A100867842 /* MachineInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MachineInfoCell.xib; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				DBAC1C262120A635001095BA /* Assets.xcassets */,
+				DB7BE2352140100B00D9CD09 /* Utilities.swift */,
 			);
 			path = "Support Files";
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB7BE2362140100B00D9CD09 /* Utilities.swift in Sources */,
 				DB14DEE9212D97B6006872A2 /* TabBar.swift in Sources */,
 				DBBE7C4C213C5B9A00758113 /* NotificationKeys.swift in Sources */,
 				DB14DEEB212DA2D0006872A2 /* MachineTab.swift in Sources */,
