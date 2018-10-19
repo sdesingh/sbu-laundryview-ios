@@ -13,9 +13,6 @@ struct LaundryRoom {
     var quadName: String
     var roomName: String
     
-    var totalWashers: Int
-    var totalDryers: Int
-    
     var washersAvailable: Int {
         
         var available = 0
@@ -48,12 +45,10 @@ struct LaundryRoom {
     
     var machines: [Machine] = []
     
-    init(quadName: String, roomName: String, totalWashers: Int, totalDryers: Int){
+    init(quadName: String, roomName: String){
         
         self.quadName = quadName
         self.roomName = roomName
-        self.totalWashers = totalWashers
-        self.totalDryers = totalDryers
         
     }
     

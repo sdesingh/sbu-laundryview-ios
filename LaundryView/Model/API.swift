@@ -44,22 +44,24 @@ class API {
     
     func parseData(jsonData: [String:Any]) -> LaundryRoom{
         
-        let roomName = jsonData["name"]! as! String
-        let totalWashers = jsonData["totalWashers"]! as! Int
-        let totalDryers = jsonData["totalDryers"]! as! Int
+        let roomName = "Irving"
         
-        var room: LaundryRoom = LaundryRoom(quadName: "Mendelsohn", roomName: roomName, totalWashers: totalWashers, totalDryers: totalDryers)
+        var room: LaundryRoom = LaundryRoom(quadName: "Mendelsohn", roomName: roomName)
         
-        let machineData = jsonData["machines"] as? [Any]
+        let machineData = jsonData["objects"] as? [Any]
             
         for machine in machineData! {
                 
             if let machineData = machine as? [String:Any] {
                 
-                let number = machineData["machineNumber"] as! Int
-                let status = machineData["statusCode"] as! Int
-                let type = machineData["machineType"] as! String
+                if(machineData["appliance_desc"] == nil){
+                    continue
+                }
                 
+                let numberString = machineData["appliance_desc"] as! String
+                let number = Int(numberString) // Convert to integer
+                let status = machineData["status_toggle"] as! Int
+                let type = machineData["appliance_type"] as! String
                 
                 var machineStatus: Machine.MachineStatus {
                     
@@ -88,7 +90,7 @@ class API {
                     
                 }
                 
-                let newMachine = Machine(machineType: machineType, currentStatus: machineStatus, machineID: number)
+                let newMachine = Machine(machineType: machineType, currentStatus: machineStatus, machineID: number!)
                 room.machines.append(newMachine)
                 
             }
@@ -100,7 +102,7 @@ class API {
     }
     
     func getData(callback: @escaping (_ jsonData: [String:Any]) -> Void){
-        retrieveData(apiURL: URL(string: API_URL + "Mendelsohn/Irving")!, callback: callback)
+        retrieveData(apiURL: URL(string: API_URL + "88000529")!, callback: callback)
     }
     
 }
