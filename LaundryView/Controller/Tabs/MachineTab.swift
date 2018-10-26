@@ -67,9 +67,9 @@ class MachineTab: UICollectionViewCell, UICollectionViewDelegateFlowLayout, UICo
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "machineCell", for: indexPath) as! MachineInfoCollectionViewCell
         
         if let machine = machineData?[indexPath.row] {
-            cell.MachineNum.text = "\(machine.machineID)"
-            
-            cell.MachineStatus.text = "\(machine.currentStatus.rawValue)"
+           
+            cell.updateCellData(machine: machine)
+           
             
         }else {
             // Do nothing
@@ -87,7 +87,7 @@ class MachineTab: UICollectionViewCell, UICollectionViewDelegateFlowLayout, UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cellSize = (self.contentView.frame.size.width / 2) - 30
+        let cellSize = (self.contentView.frame.size.width / 2) - 15
         
         return CGSize(width: cellSize, height: cellSize)
     }

@@ -82,7 +82,7 @@ struct Machine {
         
         case Available = "Available"
         case In_Progress = "In Progress"
-        case Done_Door_Closed = "Done. Door Closed."
+        case Done_Door_Closed = "Door Closed."
         case Out_Of_Order = "Out of order."
         case Unknown = "Unknown status."
         

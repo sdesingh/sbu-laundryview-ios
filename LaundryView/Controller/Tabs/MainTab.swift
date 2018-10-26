@@ -99,9 +99,8 @@ class MainTab: UICollectionViewCell, UICollectionViewDelegateFlowLayout, UIColle
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "infoCell", for: indexPath) as! MachineInfoCollectionViewCell
         
         if let machine = laundryData?.machines[indexPath.row] {
-            cell.MachineNum.text = "\(indexPath.row + 1)"
             
-            cell.MachineStatus.text = "\(machine.currentStatus.rawValue)"
+            cell.updateCellData(machine: machine)
             
         }else {
             // Do nothing

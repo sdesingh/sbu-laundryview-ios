@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -30,13 +30,13 @@
                     <rect key="frame" x="8" y="179.5" width="239" height="80"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PdR-ka-2Gr">
-                            <rect key="frame" x="15" y="21.5" width="128" height="36"/>
+                            <rect key="frame" x="20" y="22" width="128" height="36"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SZL-a5-xcX" userLabel="ProgressBar">
-                            <rect key="frame" x="15" y="65" width="209" height="5"/>
+                            <rect key="frame" x="20" y="58" width="199" height="5"/>
                             <color key="backgroundColor" red="0.13932298282258088" green="0.8403092616580311" blue="0.51483363409116412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="5" id="ANw-O9-nXN"/>
@@ -45,12 +45,12 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="SZL-a5-xcX" secondAttribute="trailing" constant="15" id="CWv-rm-NnD"/>
-                        <constraint firstAttribute="bottom" secondItem="SZL-a5-xcX" secondAttribute="bottom" constant="10" id="G1k-ad-k3T"/>
+                        <constraint firstAttribute="trailing" secondItem="SZL-a5-xcX" secondAttribute="trailing" constant="20" id="CWv-rm-NnD"/>
                         <constraint firstItem="PdR-ka-2Gr" firstAttribute="centerY" secondItem="Nfz-xH-xZU" secondAttribute="centerY" id="Rms-6N-3CT"/>
-                        <constraint firstItem="SZL-a5-xcX" firstAttribute="leading" secondItem="Nfz-xH-xZU" secondAttribute="leading" constant="15" id="a8O-M4-LGL"/>
+                        <constraint firstItem="SZL-a5-xcX" firstAttribute="leading" secondItem="Nfz-xH-xZU" secondAttribute="leading" constant="20" id="a8O-M4-LGL"/>
+                        <constraint firstItem="SZL-a5-xcX" firstAttribute="top" secondItem="PdR-ka-2Gr" secondAttribute="bottom" id="f3L-mz-7bX"/>
                         <constraint firstAttribute="height" constant="80" id="hcI-M8-6zu"/>
-                        <constraint firstItem="PdR-ka-2Gr" firstAttribute="leading" secondItem="Nfz-xH-xZU" secondAttribute="leading" constant="15" id="iU1-xY-Mih"/>
+                        <constraint firstItem="PdR-ka-2Gr" firstAttribute="leading" secondItem="Nfz-xH-xZU" secondAttribute="leading" constant="20" id="iU1-xY-Mih"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="51d-yu-iSs" userLabel="Machine Number Container">
@@ -93,7 +93,7 @@
                     <rect key="frame" x="48" y="144.5" width="60" height="30"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dryer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c99-qa-34x">
-                            <rect key="frame" x="7.5" y="4.5" width="46" height="21"/>
+                            <rect key="frame" x="7" y="4.5" width="46" height="21"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>

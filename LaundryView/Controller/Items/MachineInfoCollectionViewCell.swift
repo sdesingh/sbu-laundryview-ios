@@ -16,6 +16,7 @@ class MachineInfoCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var MachineNumContainer: UIView!
     @IBOutlet weak var MachineNum: UILabel!
     @IBOutlet weak var MachineStatusIcon: UIView!
+    @IBOutlet weak var ProgressBar: CircularProgressBar!
     
     var cellIndex: Int = 0
     
@@ -26,7 +27,7 @@ class MachineInfoCollectionViewCell: UICollectionViewCell {
         // Initialization code
         CellContainer.layer.cornerRadius = 10
         CellContainer.layer.shadowColor = UIColor.black.cgColor
-        CellContainer.layer.shadowOpacity = 0.3
+        CellContainer.layer.shadowOpacity = 0.2
         CellContainer.layer.shadowRadius = 2
         CellContainer.layer.shadowOffset = CGSize(width: 0, height: 3)
         
@@ -44,14 +45,57 @@ class MachineInfoCollectionViewCell: UICollectionViewCell {
         
         MachineStatusIcon.layer.cornerRadius = MachineStatusIcon.frame.size.height / 2
         MachineStatusIcon.layer.shadowColor = UIColor.black.cgColor
-        MachineStatusIcon.layer.shadowOpacity = 0.3
-        MachineStatusIcon.layer.shadowRadius = 2
+        MachineStatusIcon.layer.shadowOpacity = 0.15
+        MachineStatusIcon.layer.shadowRadius = 3
         MachineStatusIcon.layer.shadowOffset = CGSize(width: 0, height: 2)
         
+        ProgressBar.transform = ProgressBar.transform.rotated(by: CGFloat.pi / -2)
         
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(self.showModal))
+        self.contentView.addGestureRecognizer(gesture)
         
     }
     
+    
+    public func updateCellData(machine: Machine){
+        
+        self.MachineNum.text = "\(machine.machineID)"
+        
+        self.MachineStatus.text = "\(machine.currentStatus.rawValue)"
+        
+        var color : Colors
+        var progress : Float
+        
+        switch(machine.currentStatus){
+            
+            case .Available:
+                color = Colors.AVAILABLE
+                progress = Float(1.0)
+            
+            case .In_Progress:
+                color = Colors.IN_USE
+                progress = Float(0.45)
+            
+            case .Done_Door_Closed:
+                color = Colors.IDLE
+                progress = Float(1.0)
+            
+            default:
+                color = Colors.UNKNOWN
+                progress = Float(1.0)
+            
+        }
+        
+        self.MachineStatusIcon.backgroundColor = Utilities.hexStringToUIColor(hex: color.rawValue)
+        self.ProgressBar.progress = progress
+        
+        self.ProgressBar.progressLayer.strokeColor = Utilities.hexStringToUIColor(hex: color.rawValue).cgColor
+        
+    }
+    
+    @objc private func showModal(){
+         NotificationCenter.default.post(name: NSNotification.Name(rawValue: BASE_NOTIFICATION_KEY + SHOW_MACHINE_MODAL), object: nil)
+    }
     
 
 

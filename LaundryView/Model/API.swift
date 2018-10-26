@@ -27,7 +27,6 @@ class API {
                             callback(parsedJSON)
                         }
                         
-                        
                     } catch let jsonError {
                         print("An error has occured.", jsonError)
                     }
@@ -37,12 +36,11 @@ class API {
             
         }
         
-        
         task.resume()
         
     }
     
-    func parseData(jsonData: [String:Any]) -> LaundryRoom{
+    func parseData(jsonData: [String:Any]) -> LaundryRoom {
         
         let roomName = "Irving"
         
@@ -62,6 +60,7 @@ class API {
                 let number = Int(numberString) // Convert to integer
                 let status = machineData["status_toggle"] as! Int
                 let type = machineData["appliance_type"] as! String
+                let timeLeft = machineData["time_remaining"] as! Int
                 
                 var machineStatus: Machine.MachineStatus {
                     
@@ -90,7 +89,8 @@ class API {
                     
                 }
                 
-                let newMachine = Machine(machineType: machineType, currentStatus: machineStatus, machineID: number!)
+                var newMachine = Machine(machineType: machineType, currentStatus: machineStatus, machineID: number!)
+                newMachine.timeLeft = timeLeft
                 room.machines.append(newMachine)
                 
             }

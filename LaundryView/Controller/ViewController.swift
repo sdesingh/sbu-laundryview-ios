@@ -21,21 +21,23 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         // Adding Shadows
         Header.layer.shadowColor = UIColor.black.cgColor
-        Header.layer.shadowOpacity = 0.15
-        Header.layer.shadowRadius = 3
+        Header.layer.shadowOpacity = 0.10
+        Header.layer.shadowRadius = 5
         Header.layer.shadowOffset = CGSize(width: 0, height: 4)
         
         TabBar.layer.shadowColor = UIColor.black.cgColor
-        TabBar.layer.shadowOpacity = 0.15
-        TabBar.layer.shadowRadius = 3
+        TabBar.layer.shadowOpacity = 0.05
+        TabBar.layer.shadowRadius = 4
         TabBar.layer.shadowOffset = CGSize(width: 0, height: -4)
-        
         
         tabView.isPagingEnabled = true
         
         if let flowLayout = tabView?.collectionViewLayout as? UICollectionViewFlowLayout {
             flowLayout.minimumLineSpacing = 0
         }
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(showMachineModal), name: NSNotification.Name(rawValue: BASE_NOTIFICATION_KEY + SHOW_MACHINE_MODAL), object: nil)
+        
 
         
 //        tabView.scrollToItem(at: IndexPath(item: 1, section: 0), at: .init(rawValue: 1), animated: false)
@@ -72,6 +74,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         print("Getting laundry data...")
         DATA_MANAGER.getLaundryData()
         
+    }
+    
+    @objc func showMachineModal(){
+        let storyboard = UIStoryboard(name: "MachineInfoModal", bundle: nil)
+        let secondViewController = storyboard.instantiateViewController(withIdentifier: "MachineInfoModal") as! MachineInfoModal
+        self.present(secondViewController, animated: true, completion: nil)
     }
     
 }
