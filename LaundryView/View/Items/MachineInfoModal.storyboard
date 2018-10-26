@@ -24,17 +24,17 @@
                                 <viewLayoutGuide key="safeArea" id="xiP-gf-XyW"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FNF-7K-1xp" userLabel="Machine Status Container">
-                                <rect key="frame" x="30" y="283.5" width="315" height="100"/>
+                                <rect key="frame" x="20" y="293.5" width="335" height="80"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LoW-Vr-erT" userLabel="ProgressBar">
-                                        <rect key="frame" x="15" y="85" width="285" height="5"/>
+                                        <rect key="frame" x="15" y="63" width="305" height="4"/>
                                         <color key="backgroundColor" red="0.13932298279999999" green="0.84030926169999998" blue="0.51483363410000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="5" id="KMt-gS-6Zc"/>
+                                            <constraint firstAttribute="height" constant="4" id="KMt-gS-6Zc"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eci-oQ-ooN">
-                                        <rect key="frame" x="15" y="27.5" width="160.5" height="45.5"/>
+                                        <rect key="frame" x="15" y="17.5" width="160.5" height="45.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -42,17 +42,17 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="LoW-Vr-erT" secondAttribute="bottom" constant="10" id="9SU-Ob-rtd"/>
+                                    <constraint firstItem="LoW-Vr-erT" firstAttribute="top" secondItem="Eci-oQ-ooN" secondAttribute="bottom" id="8UJ-eC-sUd"/>
                                     <constraint firstItem="LoW-Vr-erT" firstAttribute="leading" secondItem="FNF-7K-1xp" secondAttribute="leading" constant="15" id="B5H-eL-25o"/>
                                     <constraint firstAttribute="trailing" secondItem="LoW-Vr-erT" secondAttribute="trailing" constant="15" id="HOj-od-5FC"/>
                                     <constraint firstItem="Eci-oQ-ooN" firstAttribute="centerY" secondItem="FNF-7K-1xp" secondAttribute="centerY" id="dGy-3K-l3e"/>
                                     <constraint firstItem="Eci-oQ-ooN" firstAttribute="leading" secondItem="FNF-7K-1xp" secondAttribute="leading" constant="15" id="hK0-A6-ykT"/>
-                                    <constraint firstAttribute="height" constant="100" id="m26-kj-GPx"/>
+                                    <constraint firstAttribute="height" constant="80" id="m26-kj-GPx"/>
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="bBd-jO-thH"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8bu-pp-Sdx" userLabel="Machine Favorite Container">
-                                <rect key="frame" x="305" y="233.5" width="40" height="40"/>
+                                <rect key="frame" x="315" y="243.5" width="40" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8mT-zv-KtM">
                                         <rect key="frame" x="16" y="9.5" width="8" height="21"/>
@@ -71,7 +71,7 @@
                                 <viewLayoutGuide key="safeArea" id="ob0-7X-yoT"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7od-Gg-zhr" userLabel="Machine Number Container">
-                                <rect key="frame" x="30" y="233.5" width="55" height="40"/>
+                                <rect key="frame" x="20" y="243.5" width="55" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3kp-5E-tgs">
                                         <rect key="frame" x="17.5" y="9.5" width="20" height="21"/>
@@ -90,7 +90,7 @@
                                 <viewLayoutGuide key="safeArea" id="xKo-ps-kES"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tVw-Pq-2lr" userLabel="Machine Type Container">
-                                <rect key="frame" x="95" y="233.5" width="80" height="40"/>
+                                <rect key="frame" x="85" y="243.5" width="80" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dryer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="935-tj-ZnM">
                                         <rect key="frame" x="17" y="9.5" width="46" height="21"/>
@@ -111,14 +111,14 @@
                         </subviews>
                         <constraints>
                             <constraint firstItem="48X-00-g4g" firstAttribute="leading" secondItem="0K3-HB-M6P" secondAttribute="leading" id="J7J-1h-vC9"/>
-                            <constraint firstItem="0K3-HB-M6P" firstAttribute="trailing" secondItem="FNF-7K-1xp" secondAttribute="trailing" constant="30" id="KZV-zE-BIv"/>
+                            <constraint firstItem="0K3-HB-M6P" firstAttribute="trailing" secondItem="FNF-7K-1xp" secondAttribute="trailing" constant="20" id="KZV-zE-BIv"/>
                             <constraint firstItem="48X-00-g4g" firstAttribute="top" secondItem="0K3-HB-M6P" secondAttribute="top" id="OHt-tO-LPS"/>
                             <constraint firstItem="FNF-7K-1xp" firstAttribute="top" secondItem="7od-Gg-zhr" secondAttribute="bottom" constant="10" id="S2o-cF-FHy"/>
                             <constraint firstItem="7od-Gg-zhr" firstAttribute="leading" secondItem="FNF-7K-1xp" secondAttribute="leadingMargin" constant="-8" id="dsb-Em-V0V"/>
                             <constraint firstItem="0K3-HB-M6P" firstAttribute="trailing" secondItem="48X-00-g4g" secondAttribute="trailing" id="fbh-Vt-l7Y"/>
                             <constraint firstItem="tVw-Pq-2lr" firstAttribute="leading" secondItem="7od-Gg-zhr" secondAttribute="trailing" constant="10" id="feX-Wd-Yka"/>
                             <constraint firstItem="FNF-7K-1xp" firstAttribute="top" secondItem="tVw-Pq-2lr" secondAttribute="bottom" constant="10" id="icH-w1-d4h"/>
-                            <constraint firstItem="FNF-7K-1xp" firstAttribute="leading" secondItem="0K3-HB-M6P" secondAttribute="leading" constant="30" id="lch-z4-niz"/>
+                            <constraint firstItem="FNF-7K-1xp" firstAttribute="leading" secondItem="0K3-HB-M6P" secondAttribute="leading" constant="20" id="lch-z4-niz"/>
                             <constraint firstItem="FNF-7K-1xp" firstAttribute="centerY" secondItem="rb7-Gh-xrW" secondAttribute="centerY" id="myi-2T-QlD"/>
                             <constraint firstItem="0K3-HB-M6P" firstAttribute="bottom" secondItem="48X-00-g4g" secondAttribute="bottom" id="sJf-W2-GGj"/>
                             <constraint firstItem="FNF-7K-1xp" firstAttribute="trailingMargin" secondItem="8bu-pp-Sdx" secondAttribute="trailing" constant="-8" id="vIt-Ut-uEl"/>

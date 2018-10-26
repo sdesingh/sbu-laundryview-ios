@@ -29,7 +29,6 @@
 		DBAC1C362120A804001095BA /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAC1C352120A804001095BA /* DataManager.swift */; };
 		DBAC1C382120A827001095BA /* LaundryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAC1C372120A827001095BA /* LaundryData.swift */; };
 		DBBE7C4C213C5B9A00758113 /* NotificationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE7C4B213C5B9A00758113 /* NotificationKeys.swift */; };
-		DBD85E252136F21B00DCCAEB /* MachineInfoModal.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBD85E242136F21B00DCCAEB /* MachineInfoModal.xib */; };
 		DBD85E2721371DF200DCCAEB /* MachineInfoModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD85E2621371DF200DCCAEB /* MachineInfoModal.swift */; };
 		DBD85E2921399B1200DCCAEB /* LaundryTabCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD85E2821399B1200DCCAEB /* LaundryTabCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -59,7 +58,6 @@
 		DBAC1C352120A804001095BA /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		DBAC1C372120A827001095BA /* LaundryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryData.swift; sourceTree = "<group>"; };
 		DBBE7C4B213C5B9A00758113 /* NotificationKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationKeys.swift; sourceTree = "<group>"; };
-		DBD85E242136F21B00DCCAEB /* MachineInfoModal.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MachineInfoModal.xib; sourceTree = "<group>"; };
 		DBD85E2621371DF200DCCAEB /* MachineInfoModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineInfoModal.swift; sourceTree = "<group>"; };
 		DBD85E2821399B1200DCCAEB /* LaundryTabCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryTabCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,7 +78,6 @@
 			children = (
 				DB2E46842127A94D00019330 /* TabBar.xib */,
 				DB9FC32A212100A100867842 /* MachineInfoCell.xib */,
-				DBD85E242136F21B00DCCAEB /* MachineInfoModal.xib */,
 				DB9ED5EE2182CDE8003E82B1 /* MachineInfoModal.storyboard */,
 			);
 			path = Items;
@@ -251,7 +248,6 @@
 				DB9FC32B212100A100867842 /* MachineInfoCell.xib in Resources */,
 				DBAC1C2A2120A635001095BA /* LaunchScreen.storyboard in Resources */,
 				DB4FEC0A213D8C53002BEED1 /* MachineTab.xib in Resources */,
-				DBD85E252136F21B00DCCAEB /* MachineInfoModal.xib in Resources */,
 				DB2E46852127A94D00019330 /* TabBar.xib in Resources */,
 				DBAC1C272120A635001095BA /* Assets.xcassets in Resources */,
 				DBAC1C252120A633001095BA /* Main.storyboard in Resources */,
