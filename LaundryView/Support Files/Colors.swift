@@ -18,5 +18,10 @@ enum Colors: String{
     
     // Quad Colors
     
+    // App Colors
+    case PRIMARY = "#0076FF"
+    case STATE_DISABLED = "#dbdbdb"
+    
+
     
 }

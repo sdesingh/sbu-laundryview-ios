@@ -11,7 +11,6 @@ import UIKit
 class MachineTab: UICollectionViewCell, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
     @IBOutlet var collectionView: UICollectionView!
-    @IBOutlet weak var machineType: UILabel!
     
     var machineData: [Machine]?
     var gridType: Machine.MachineType?
@@ -46,13 +45,6 @@ class MachineTab: UICollectionViewCell, UICollectionViewDelegateFlowLayout, UICo
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.collectionView.register(UINib.init(nibName: "MachineInfoCell", bundle: nil), forCellWithReuseIdentifier: "machineCell")
-        
-        if(gridType == .Washer){
-            machineType.text = "Washers"
-        }else {
-            machineType.text = "Dryers"
-        }
-        
         
         NotificationCenter.default.addObserver(self, selector: #selector(updateViewsData), name: NSNotification.Name(rawValue: BASE_NOTIFICATION_KEY + DATA_RETRIEVED_SUCCESS), object: nil)
         

@@ -14,7 +14,6 @@
             <connections>
                 <outlet property="collectionView" destination="EPS-gc-DY8" id="TMA-D5-lfg"/>
                 <outlet property="contentView" destination="y1e-Kc-TRa" id="nYi-h7-2DM"/>
-                <outlet property="machineType" destination="TET-WB-Z8S" id="E6b-lI-ImF"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -22,14 +21,8 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Machine Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TET-WB-Z8S">
-                    <rect key="frame" x="16" y="12" width="163" height="30"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="EPS-gc-DY8">
-                    <rect key="frame" x="0.0" y="50" width="375" height="617"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="EPS-gc-DY8">
+                    <rect key="frame" x="10" y="0.0" width="355" height="667"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LbG-AS-jpu">
                         <size key="itemSize" width="50" height="50"/>
@@ -46,11 +39,9 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="EPS-gc-DY8" firstAttribute="bottom" secondItem="y1e-Kc-TRa" secondAttribute="bottom" id="J9o-aT-pCy"/>
-                <constraint firstItem="EPS-gc-DY8" firstAttribute="trailing" secondItem="y1e-Kc-TRa" secondAttribute="trailing" id="Jlm-q5-p99"/>
-                <constraint firstItem="TET-WB-Z8S" firstAttribute="leading" secondItem="y1e-Kc-TRa" secondAttribute="leading" constant="16" id="Q4G-FB-Exh"/>
-                <constraint firstItem="EPS-gc-DY8" firstAttribute="leading" secondItem="y1e-Kc-TRa" secondAttribute="leading" id="aoD-yG-Ybr"/>
-                <constraint firstItem="EPS-gc-DY8" firstAttribute="top" secondItem="y1e-Kc-TRa" secondAttribute="top" constant="50" id="jw8-nj-1GB"/>
-                <constraint firstItem="EPS-gc-DY8" firstAttribute="top" secondItem="TET-WB-Z8S" secondAttribute="bottom" constant="8" id="lQy-69-WWY"/>
+                <constraint firstItem="EPS-gc-DY8" firstAttribute="trailing" secondItem="y1e-Kc-TRa" secondAttribute="trailing" constant="-10" id="Jlm-q5-p99"/>
+                <constraint firstItem="EPS-gc-DY8" firstAttribute="leading" secondItem="y1e-Kc-TRa" secondAttribute="leading" constant="10" id="aoD-yG-Ybr"/>
+                <constraint firstItem="EPS-gc-DY8" firstAttribute="top" secondItem="y1e-Kc-TRa" secondAttribute="top" id="jw8-nj-1GB"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="bnG-OO-0lz"/>

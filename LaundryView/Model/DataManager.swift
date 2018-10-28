@@ -24,6 +24,7 @@ class DataManager {
             (jsonData: [String:Any]) in
             
             self.laundryRoom = self.api.parseData(jsonData: jsonData)
+            self.laundryRoom?.machines.sort { $0.machineID < $1.machineID }
             
             DispatchQueue.main.async {
                 NotificationCenter.default.post(name: NSNotification.Name(rawValue: BASE_NOTIFICATION_KEY + DATA_RETRIEVED_SUCCESS), object: nil)

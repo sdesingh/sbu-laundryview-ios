@@ -12,6 +12,13 @@
 		DB2E467D2127733B00019330 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2E467C2127733B00019330 /* Constants.swift */; };
 		DB2E468121279B1C00019330 /* MainTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2E468021279B1C00019330 /* MainTab.swift */; };
 		DB2E46852127A94D00019330 /* TabBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB2E46842127A94D00019330 /* TabBar.xib */; };
+		DB419DA62183F05400CA8FD9 /* RoomSelect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB419DA52183F05400CA8FD9 /* RoomSelect.storyboard */; };
+		DB419DAC2183F36D00CA8FD9 /* ProductSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DB419DA82183F36D00CA8FD9 /* ProductSans-Regular.ttf */; };
+		DB419DAF2183F36D00CA8FD9 /* ProductSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DB419DAB2183F36D00CA8FD9 /* ProductSans-Bold.ttf */; };
+		DB419DB42183F54700CA8FD9 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DB419DB02183F54600CA8FD9 /* Lato-Light.ttf */; };
+		DB419DB52183F54700CA8FD9 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DB419DB12183F54600CA8FD9 /* Lato-Regular.ttf */; };
+		DB419DB62183F54700CA8FD9 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DB419DB22183F54600CA8FD9 /* Lato-Bold.ttf */; };
+		DB419DB72183F54700CA8FD9 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DB419DB32183F54700CA8FD9 /* Lato-Black.ttf */; };
 		DB4FEC0A213D8C53002BEED1 /* MachineTab.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB2E46822127A6E400019330 /* MachineTab.xib */; };
 		DB7BE2362140100B00D9CD09 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7BE2352140100B00D9CD09 /* Utilities.swift */; };
 		DB96FB6C218246E200C9B2ED /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB96FB6B218246E200C9B2ED /* CircularProgressBar.swift */; };
@@ -40,6 +47,13 @@
 		DB2E468021279B1C00019330 /* MainTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTab.swift; sourceTree = "<group>"; };
 		DB2E46822127A6E400019330 /* MachineTab.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MachineTab.xib; sourceTree = "<group>"; };
 		DB2E46842127A94D00019330 /* TabBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBar.xib; sourceTree = "<group>"; };
+		DB419DA52183F05400CA8FD9 /* RoomSelect.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RoomSelect.storyboard; sourceTree = "<group>"; };
+		DB419DA82183F36D00CA8FD9 /* ProductSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProductSans-Regular.ttf"; sourceTree = "<group>"; };
+		DB419DAB2183F36D00CA8FD9 /* ProductSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProductSans-Bold.ttf"; sourceTree = "<group>"; };
+		DB419DB02183F54600CA8FD9 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
+		DB419DB12183F54600CA8FD9 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		DB419DB22183F54600CA8FD9 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		DB419DB32183F54700CA8FD9 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
 		DB7BE2352140100B00D9CD09 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		DB96FB6B218246E200C9B2ED /* CircularProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBar.swift; sourceTree = "<group>"; };
 		DB96FB6D2182503400C9B2ED /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -90,6 +104,19 @@
 				DB2E46822127A6E400019330 /* MachineTab.xib */,
 			);
 			path = Tabs;
+			sourceTree = "<group>";
+		};
+		DB419DA72183F33C00CA8FD9 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				DB419DB32183F54700CA8FD9 /* Lato-Black.ttf */,
+				DB419DB22183F54600CA8FD9 /* Lato-Bold.ttf */,
+				DB419DB02183F54600CA8FD9 /* Lato-Light.ttf */,
+				DB419DB12183F54600CA8FD9 /* Lato-Regular.ttf */,
+				DB419DAB2183F36D00CA8FD9 /* ProductSans-Bold.ttf */,
+				DB419DA82183F36D00CA8FD9 /* ProductSans-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		DBAA613B212C5A2A0048692B /* Tabs */ = {
@@ -159,6 +186,7 @@
 				DB2E467F21279B0100019330 /* Tabs */,
 				DB2E467E2127934400019330 /* Items */,
 				DBAC1C232120A633001095BA /* Main.storyboard */,
+				DB419DA52183F05400CA8FD9 /* RoomSelect.storyboard */,
 				DBAC1C282120A635001095BA /* LaunchScreen.storyboard */,
 			);
 			path = View;
@@ -178,6 +206,7 @@
 		DBAC1C342120A682001095BA /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
+				DB419DA72183F33C00CA8FD9 /* Fonts */,
 				DBAC1C262120A635001095BA /* Assets.xcassets */,
 				DB7BE2352140100B00D9CD09 /* Utilities.swift */,
 				DB96FB6D2182503400C9B2ED /* Colors.swift */,
@@ -246,11 +275,18 @@
 				DB9ED5EF2182CDE8003E82B1 /* MachineInfoModal.storyboard in Resources */,
 				DB9FC3292120DF1700867842 /* MainTab.xib in Resources */,
 				DB9FC32B212100A100867842 /* MachineInfoCell.xib in Resources */,
+				DB419DB42183F54700CA8FD9 /* Lato-Light.ttf in Resources */,
 				DBAC1C2A2120A635001095BA /* LaunchScreen.storyboard in Resources */,
+				DB419DA62183F05400CA8FD9 /* RoomSelect.storyboard in Resources */,
 				DB4FEC0A213D8C53002BEED1 /* MachineTab.xib in Resources */,
+				DB419DB62183F54700CA8FD9 /* Lato-Bold.ttf in Resources */,
+				DB419DAC2183F36D00CA8FD9 /* ProductSans-Regular.ttf in Resources */,
 				DB2E46852127A94D00019330 /* TabBar.xib in Resources */,
 				DBAC1C272120A635001095BA /* Assets.xcassets in Resources */,
+				DB419DB52183F54700CA8FD9 /* Lato-Regular.ttf in Resources */,
 				DBAC1C252120A633001095BA /* Main.storyboard in Resources */,
+				DB419DB72183F54700CA8FD9 /* Lato-Black.ttf in Resources */,
+				DB419DAF2183F36D00CA8FD9 /* ProductSans-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

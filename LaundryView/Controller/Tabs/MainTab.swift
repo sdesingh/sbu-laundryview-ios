@@ -89,7 +89,7 @@ class MainTab: UICollectionViewCell, UICollectionViewDelegateFlowLayout, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cellSize = (contentView.frame.size.width / 2) - 35
+        let cellSize = (contentView.frame.size.width / 2) - 20
         
         return CGSize(width: cellSize, height: cellSize)
     }

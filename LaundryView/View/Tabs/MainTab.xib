@@ -162,7 +162,7 @@
                     </constraints>
                 </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="NLy-iY-lE2">
-                    <rect key="frame" x="0.0" y="225.5" width="361" height="364.5"/>
+                    <rect key="frame" x="10" y="225.5" width="341" height="364.5"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aCZ-OY-tLC">
                         <size key="itemSize" width="50" height="50"/>
@@ -190,10 +190,10 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="PSs-fK-hZ8" secondAttribute="trailing" constant="30" id="NUj-J8-DXQ"/>
                 <constraint firstItem="u9W-PX-qet" firstAttribute="bottom" secondItem="ddG-Wf-bij" secondAttribute="bottom" constant="-13.5" id="NeW-h0-uQi"/>
                 <constraint firstItem="NLy-iY-lE2" firstAttribute="top" secondItem="ddG-Wf-bij" secondAttribute="bottom" constant="16" id="OMS-80-Edz"/>
-                <constraint firstItem="NLy-iY-lE2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="OaU-wV-LdL"/>
+                <constraint firstItem="NLy-iY-lE2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="OaU-wV-LdL"/>
                 <constraint firstItem="PSs-fK-hZ8" firstAttribute="top" secondItem="uki-cb-MKa" secondAttribute="bottom" constant="8" id="cBs-AK-w7M"/>
                 <constraint firstItem="ddG-Wf-bij" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="dhY-hC-8u4"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="NLy-iY-lE2" secondAttribute="trailing" id="loj-xS-wD0"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="NLy-iY-lE2" secondAttribute="trailing" constant="10" id="loj-xS-wD0"/>
                 <constraint firstItem="00S-tg-haG" firstAttribute="trailing" secondItem="PSs-fK-hZ8" secondAttribute="trailing" id="mzN-GN-AZM"/>
                 <constraint firstItem="u9W-PX-qet" firstAttribute="trailing" secondItem="PSs-fK-hZ8" secondAttribute="trailing" id="paQ-9r-EnR"/>
                 <constraint firstItem="uki-cb-MKa" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="qH3-0o-xYy"/>

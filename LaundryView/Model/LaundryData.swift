@@ -72,10 +72,10 @@ struct LaundryRoom {
 
 struct Machine {
     
-    enum MachineType {
-        case Washer
-        case Dryer
-        case Other
+    enum MachineType: String {
+        case Washer = "Washer"
+        case Dryer = "Dryer"
+        case Other = "Other"
     }
     
     enum MachineStatus: String {
@@ -91,15 +91,14 @@ struct Machine {
     var machineType: MachineType
     var currentStatus: MachineStatus
     var machineID: Int
-    var timeLeft: Int
+    var timeLeft: Int = 0
+    var notificationSet: Bool = false
+    var progress: Double = 0
     
     init(machineType: MachineType, currentStatus: MachineStatus, machineID: Int) {
         self.machineType = machineType
         self.currentStatus = currentStatus
         self.machineID = machineID
-        
-        // Default Time Left
-        timeLeft = 0
     }
     
     

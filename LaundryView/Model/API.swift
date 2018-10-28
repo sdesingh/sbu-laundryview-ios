@@ -60,6 +60,7 @@ class API {
                 let number = Int(numberString) // Convert to integer
                 let status = machineData["status_toggle"] as! Int
                 let type = machineData["appliance_type"] as! String
+                let progress = machineData["percentage"] as! Double
                 let timeLeft = machineData["time_remaining"] as! Int
                 
                 var machineStatus: Machine.MachineStatus {
@@ -91,6 +92,7 @@ class API {
                 
                 var newMachine = Machine(machineType: machineType, currentStatus: machineStatus, machineID: number!)
                 newMachine.timeLeft = timeLeft
+                newMachine.progress = progress
                 room.machines.append(newMachine)
                 
             }

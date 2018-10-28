@@ -16,6 +16,7 @@ class MachineInfoCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var MachineNumContainer: UIView!
     @IBOutlet weak var MachineNum: UILabel!
     @IBOutlet weak var MachineStatusIcon: UIView!
+    @IBOutlet weak var MachineStatusIconImage: UIImageView!
     @IBOutlet weak var ProgressBar: CircularProgressBar!
     
     var cellIndex: Int = 0
@@ -34,8 +35,8 @@ class MachineInfoCollectionViewCell: UICollectionViewCell {
         InfoContainer.layer.cornerRadius = InfoContainer.frame.size.height / 2
         InfoContainer.layer.shadowColor = UIColor.black.cgColor
         InfoContainer.layer.shadowOpacity = 0.2
-        InfoContainer.layer.shadowRadius = 2
-        InfoContainer.layer.shadowOffset = CGSize(width: 0, height: 2)
+        InfoContainer.layer.shadowRadius = 4
+        InfoContainer.layer.shadowOffset = CGSize(width: 0, height: 0)
         
         MachineNumContainer.layer.cornerRadius = MachineNumContainer.frame.size.height / 2
         MachineNumContainer.layer.shadowColor = UIColor.black.cgColor
@@ -63,38 +64,52 @@ class MachineInfoCollectionViewCell: UICollectionViewCell {
         
         self.MachineStatus.text = "\(machine.currentStatus.rawValue)"
         
+        cellIndex = machine.machineID - 1
+        
         var color : Colors
         var progress : Float
+        var statusIcon : UIImage
         
         switch(machine.currentStatus){
             
             case .Available:
                 color = Colors.AVAILABLE
                 progress = Float(1.0)
+                statusIcon = UIImage(named: "done")!
             
             case .In_Progress:
                 color = Colors.IN_USE
-                progress = Float(0.45)
+                progress = Float(machine.progress)
+                statusIcon = machine.machineType == .Washer ? UIImage(named: "droplet")! : UIImage(named: "air")!
             
             case .Done_Door_Closed:
                 color = Colors.IDLE
                 progress = Float(1.0)
+                statusIcon = UIImage(named: "waiting")!
+            
             
             default:
                 color = Colors.UNKNOWN
                 progress = Float(1.0)
+                statusIcon = UIImage(named: "cancel")!
+            
             
         }
         
         self.MachineStatusIcon.backgroundColor = Utilities.hexStringToUIColor(hex: color.rawValue)
         self.ProgressBar.progress = progress
         
+        MachineStatusIconImage.image = statusIcon
+        MachineStatusIconImage.image = MachineStatusIconImage.image!.withRenderingMode(.alwaysTemplate)
+        MachineStatusIconImage.tintColor = Utilities.hexStringToUIColor(hex: color.rawValue)
+        
         self.ProgressBar.progressLayer.strokeColor = Utilities.hexStringToUIColor(hex: color.rawValue).cgColor
         
     }
     
     @objc private func showModal(){
-         NotificationCenter.default.post(name: NSNotification.Name(rawValue: BASE_NOTIFICATION_KEY + SHOW_MACHINE_MODAL), object: nil)
+        let info = ["index":cellIndex]
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: BASE_NOTIFICATION_KEY + SHOW_MACHINE_MODAL), object: nil, userInfo: info)
     }
     
 

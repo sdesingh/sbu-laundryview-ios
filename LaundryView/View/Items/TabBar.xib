@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TabBar" customModule="LaundryView" customModuleProvider="target">
             <connections>
+                <outlet property="DryerButton" destination="kdo-8B-haP" id="bIy-C7-MnJ"/>
+                <outlet property="HomeButton" destination="fbf-RW-A8H" id="jmn-I7-Mki"/>
+                <outlet property="WasherButton" destination="kwH-Dd-Zdb" id="JpN-Q7-68I"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="egz-gl-YgB"/>
             </connections>
         </placeholder>
@@ -23,52 +26,47 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JVh-Uf-99G" userLabel="BG">
                     <rect key="frame" x="0.0" y="0.0" width="347" height="54"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jly-Sg-MLH">
-                            <rect key="frame" x="113.5" y="0.0" width="120" height="54"/>
-                            <color key="backgroundColor" red="1" green="0.95093638729999996" blue="0.34583918699999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yon-9d-yaU">
+                            <rect key="frame" x="0.0" y="10" width="347" height="34"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kwH-Dd-Zdb" userLabel="Washer">
+                                    <rect key="frame" x="0.0" y="0.0" width="115.5" height="34"/>
+                                    <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" image="droplet"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbf-RW-A8H" userLabel="Home">
+                                    <rect key="frame" x="115.5" y="0.0" width="116" height="34"/>
+                                    <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" image="home">
+                                        <color key="titleColor" red="0.92666751150000004" green="0.37853020430000001" blue="0.28623148799999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kdo-8B-haP" userLabel="Dryer">
+                                    <rect key="frame" x="231.5" y="0.0" width="115.5" height="34"/>
+                                    <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" image="air"/>
+                                </button>
+                            </subviews>
                             <constraints>
-                                <constraint firstAttribute="width" constant="120" id="lnX-XQ-dY8"/>
+                                <constraint firstAttribute="bottom" secondItem="kdo-8B-haP" secondAttribute="bottom" id="31Z-aw-D4Y"/>
+                                <constraint firstItem="fbf-RW-A8H" firstAttribute="top" secondItem="yon-9d-yaU" secondAttribute="top" id="6Pq-2x-DaM"/>
+                                <constraint firstAttribute="bottom" secondItem="fbf-RW-A8H" secondAttribute="bottom" id="Faz-6z-bpq"/>
+                                <constraint firstAttribute="bottom" secondItem="kwH-Dd-Zdb" secondAttribute="bottom" id="J90-Kz-Iv6"/>
+                                <constraint firstItem="kdo-8B-haP" firstAttribute="top" secondItem="yon-9d-yaU" secondAttribute="top" id="Lrw-CR-bgo"/>
+                                <constraint firstItem="kwH-Dd-Zdb" firstAttribute="top" secondItem="yon-9d-yaU" secondAttribute="top" id="MTQ-Zo-fOH"/>
                             </constraints>
-                        </view>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEN-sG-pel">
-                            <rect key="frame" x="151.5" y="12" width="44" height="30"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                            <state key="normal" title="Home">
-                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </state>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYA-AG-B3V">
-                            <rect key="frame" x="15" y="12" width="83.5" height="30"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                            <state key="normal" title="Washers">
-                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </state>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xtp-3t-4M1">
-                            <rect key="frame" x="248.5" y="12" width="83.5" height="30"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                            <state key="normal" title="Dryers">
-                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </state>
-                        </button>
+                        </stackView>
                     </subviews>
-                    <color key="backgroundColor" red="0.98439523963730569" green="0.98439523963730569" blue="0.98439523963730569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="xtp-3t-4M1" firstAttribute="centerY" secondItem="JVh-Uf-99G" secondAttribute="centerY" id="34e-YA-wjo"/>
-                        <constraint firstItem="bYA-AG-B3V" firstAttribute="leading" secondItem="JVh-Uf-99G" secondAttribute="leading" constant="15" id="Jny-ho-sW1"/>
-                        <constraint firstItem="bYA-AG-B3V" firstAttribute="centerY" secondItem="JVh-Uf-99G" secondAttribute="centerY" id="W6A-YJ-SNd"/>
-                        <constraint firstItem="Jly-Sg-MLH" firstAttribute="top" secondItem="JVh-Uf-99G" secondAttribute="top" id="WiF-9Y-otm"/>
-                        <constraint firstAttribute="bottom" secondItem="Jly-Sg-MLH" secondAttribute="bottom" id="X2F-dJ-pp0"/>
-                        <constraint firstItem="Jly-Sg-MLH" firstAttribute="centerX" secondItem="JVh-Uf-99G" secondAttribute="centerX" id="haf-jP-KHH"/>
-                        <constraint firstItem="xtp-3t-4M1" firstAttribute="leading" secondItem="Jly-Sg-MLH" secondAttribute="trailing" constant="15" id="iWw-HL-rC5"/>
-                        <constraint firstAttribute="trailing" secondItem="xtp-3t-4M1" secondAttribute="trailing" constant="15" id="j1i-qw-3RD"/>
-                        <constraint firstItem="oEN-sG-pel" firstAttribute="centerY" secondItem="JVh-Uf-99G" secondAttribute="centerY" id="kTF-bl-D37"/>
-                        <constraint firstItem="oEN-sG-pel" firstAttribute="centerX" secondItem="JVh-Uf-99G" secondAttribute="centerX" id="uOO-Zb-ggL"/>
-                        <constraint firstItem="Jly-Sg-MLH" firstAttribute="leading" secondItem="bYA-AG-B3V" secondAttribute="trailing" constant="15" id="xvg-dc-SAo"/>
+                        <constraint firstAttribute="bottom" secondItem="yon-9d-yaU" secondAttribute="bottom" constant="10" id="7wm-3I-azM"/>
+                        <constraint firstItem="yon-9d-yaU" firstAttribute="top" secondItem="JVh-Uf-99G" secondAttribute="top" constant="10" id="EtA-39-HYZ"/>
+                        <constraint firstItem="yon-9d-yaU" firstAttribute="leading" secondItem="JVh-Uf-99G" secondAttribute="leading" id="QRK-Cw-fBj"/>
+                        <constraint firstAttribute="trailing" secondItem="yon-9d-yaU" secondAttribute="trailing" id="URO-w7-2zJ"/>
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="JVh-Uf-99G" secondAttribute="bottom" id="6Yo-JC-oqQ"/>
                 <constraint firstItem="JVh-Uf-99G" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Ayx-vh-IYo"/>
@@ -77,7 +75,12 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="81.5" y="223"/>
+            <point key="canvasLocation" x="68" y="175"/>
         </view>
     </objects>
+    <resources>
+        <image name="air" width="31" height="30.5"/>
+        <image name="droplet" width="20" height="27"/>
+        <image name="home" width="28.5" height="27.5"/>
+    </resources>
 </document>

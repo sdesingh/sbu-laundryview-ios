@@ -27,6 +27,14 @@
                                 <constraint firstAttribute="height" constant="10" id="UYV-E6-6fH"/>
                             </constraints>
                         </view>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="droplet" translatesAutoresizingMaskIntoConstraints="NO" id="FEr-z7-Fx3" userLabel="Status Icon Image">
+                            <rect key="frame" x="67.5" y="67.5" width="25" height="25"/>
+                            <color key="tintColor" red="0.92666751150000004" green="0.37853020430000001" blue="0.28623148799999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="25" id="V5P-l4-f2H"/>
+                                <constraint firstAttribute="height" constant="25" id="bqt-53-4MG"/>
+                            </constraints>
+                        </imageView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q7b-tz-4A5" customClass="CircularProgressBar" customModule="LaundryView" customModuleProvider="target">
                             <rect key="frame" x="5" y="5" width="150" height="150"/>
                             <constraints>
@@ -35,11 +43,13 @@
                             </constraints>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" red="0.96407526021803736" green="0.96407526021803736" blue="0.96407526021803736" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.97244296326372259" green="0.97244296326372259" blue="0.97244296326372259" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="DQm-Zw-a6A" firstAttribute="top" secondItem="0Sw-28-91v" secondAttribute="top" constant="6" id="BdZ-pW-Ii0"/>
                         <constraint firstItem="q7b-tz-4A5" firstAttribute="centerY" secondItem="0Sw-28-91v" secondAttribute="centerY" id="Iq1-8y-IVC"/>
                         <constraint firstItem="DQm-Zw-a6A" firstAttribute="leading" secondItem="0Sw-28-91v" secondAttribute="leading" constant="6" id="JFW-65-P2S"/>
+                        <constraint firstItem="FEr-z7-Fx3" firstAttribute="centerY" secondItem="0Sw-28-91v" secondAttribute="centerY" id="K2c-FF-Ahq"/>
+                        <constraint firstItem="FEr-z7-Fx3" firstAttribute="centerX" secondItem="0Sw-28-91v" secondAttribute="centerX" id="mBG-fr-1nb"/>
                         <constraint firstItem="q7b-tz-4A5" firstAttribute="centerX" secondItem="0Sw-28-91v" secondAttribute="centerX" id="oT8-Yg-F6F"/>
                     </constraints>
                 </view>
@@ -64,8 +74,8 @@
                     <rect key="frame" x="167" y="5" width="25" height="25"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Gz-UB-mmt" userLabel="Machine Num">
-                            <rect key="frame" x="8.5" y="3.5" width="8" height="18"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <rect key="frame" x="9.5" y="6" width="6" height="13.5"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
@@ -100,9 +110,13 @@
                 <outlet property="MachineNumContainer" destination="4ZM-Ok-Gc7" id="bHm-LN-UuU"/>
                 <outlet property="MachineStatus" destination="9o4-hU-1IU" id="zod-Ao-Cu8"/>
                 <outlet property="MachineStatusIcon" destination="DQm-Zw-a6A" id="XK9-YQ-1Mm"/>
+                <outlet property="MachineStatusIconImage" destination="FEr-z7-Fx3" id="tJx-7Q-ksL"/>
                 <outlet property="ProgressBar" destination="q7b-tz-4A5" id="h44-8l-ubr"/>
             </connections>
-            <point key="canvasLocation" x="-50.399999999999999" y="-180.80959520239881"/>
+            <point key="canvasLocation" x="-51.200000000000003" y="-180.80959520239881"/>
         </view>
     </objects>
+    <resources>
+        <image name="droplet" width="20" height="27"/>
+    </resources>
 </document>

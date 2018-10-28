@@ -19,7 +19,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Adding Shadows
+//        // Adding Shadows
         Header.layer.shadowColor = UIColor.black.cgColor
         Header.layer.shadowOpacity = 0.10
         Header.layer.shadowRadius = 5
@@ -34,16 +34,25 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         if let flowLayout = tabView?.collectionViewLayout as? UICollectionViewFlowLayout {
             flowLayout.minimumLineSpacing = 0
+            flowLayout.scrollDirection = .horizontal
         }
         
         NotificationCenter.default.addObserver(self, selector: #selector(showMachineModal), name: NSNotification.Name(rawValue: BASE_NOTIFICATION_KEY + SHOW_MACHINE_MODAL), object: nil)
         
-
         
-//        tabView.scrollToItem(at: IndexPath(item: 1, section: 0), at: .init(rawValue: 1), animated: false)
         
         DATA_MANAGER.getLaundryData()
+    
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+//        tabView?.setContentOffset(CGPoint.zero, animated: false)
+        tabView.scrollToItem(at: IndexPath(item: 1, section: 0), at: .centeredHorizontally, animated: false)
+        
+    }
+
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 3
@@ -76,9 +85,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
     }
     
-    @objc func showMachineModal(){
+    @objc func showMachineModal(_ notification: Notification){
         let storyboard = UIStoryboard(name: "MachineInfoModal", bundle: nil)
         let secondViewController = storyboard.instantiateViewController(withIdentifier: "MachineInfoModal") as! MachineInfoModal
+        secondViewController.index = notification.userInfo?["index"] as! Int
         self.present(secondViewController, animated: true, completion: nil)
     }
     

@@ -31,7 +31,8 @@ class CircularProgressBar: UIView {
         shapeLayer.path = bgPath.cgPath
         shapeLayer.lineWidth = 3
         shapeLayer.fillColor = nil
-        shapeLayer.strokeColor = UIColor.lightGray.cgColor
+        shapeLayer.strokeColor = UIColor.red.cgColor
+        shapeLayer.opacity = 0.3
         
         progressLayer = CAShapeLayer()
         progressLayer.path = bgPath.cgPath
