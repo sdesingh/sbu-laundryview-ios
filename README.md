@@ -7,7 +7,7 @@ Allows students to track and view the status of more than a hundred laundry mach
 - Set notifications to remind you when your laundry is done
 - Still in development.
 
-## Screenshots
+## Screenshots (Subject to Change)
 <div style="display:flex;" >
     <img width="33%" src="https://i.imgur.com/26JHCMw.png">
     <img width="33%" src="https://i.imgur.com/nC87zDP.png">
