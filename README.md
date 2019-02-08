@@ -1,6 +1,3 @@
-# sbu-laundryview-ios
-Keep track of your laundry on campus! (In Development)
-
 # SBU LaundryView for iOS
 Allows students to track and view the status of more than a hundred laundry machines on campus.
 
